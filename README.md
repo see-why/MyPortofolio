@@ -3,7 +3,7 @@
 # MyPortofolio
 A professional brochure of my several completed projects, starting with a mobile version skeleton
 
-![screenshot](/landingPage.png)
+![screenshot](/LandingPage.PNG)
 
 ## Built With
 
