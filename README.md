@@ -1,3 +1,5 @@
+![](https://img.shields.io/badge/Microverse-blueviolet)
+
 # MyPortofolio
 A professional brochure of my several completed projects, starting with a mobile version skeleton
 
@@ -8,11 +10,27 @@ A professional brochure of my several completed projects, starting with a mobile
 - Html
 - CSS
 
+## Live Demo
+
+[Live Demo Link](https://see-why.github.io/MyPortofolio/)
+
 ## Getting started
 the project comes shipped with linters config for html and css, so ensure you have lighthouse, Webhint
 and Stylelint installed on your local environment
 
 Get a local copy and run.
+
+### Prerequisites
+
+### Setup
+
+### Install
+
+### Usage
+
+### Run tests
+
+### Deployment
 
 ## Authors
 
@@ -32,6 +50,4 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- my dog perry for the comforting lick here and there 
