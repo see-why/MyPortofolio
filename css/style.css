@@ -13,12 +13,27 @@ body {
   background-color: white;
 }
 
+figure {
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+
 h1 {
   font-family: playfair_displayregular, Helvetica, sans-serif;
   font-size: 50px;
   font-weight: 200;
   line-height: 100%;
   margin-bottom: 2%;
+}
+
+h2 {
+  font-family: poppinsregular, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffff;
 }
 
 ul.navbar {
@@ -31,6 +46,29 @@ p {
   font-weight: normal;
   line-height: 21px;
   letter-spacing: -0.01em;
+}
+
+.blockImage {
+  width: 100%;
+  display: block;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
+  justify-content: space-around;
+}
+
+.content ul {
+  color: #ffff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  letter-spacing: -0.0525em;
+  font-family: poppinsregular, Helvetica, sans-serif;
 }
 
 .container {
@@ -46,15 +84,6 @@ p {
   -webkit-overflow-scrolling: touch;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 5%;
-  padding-left: 2%;
-  padding-right: 2%;
-  justify-content: space-around;
-}
-
 .header {
   display: flex;
   align-items: center;
@@ -66,18 +95,136 @@ p {
   margin-right: 2%;
 }
 
-.collaborationbutton {
+.arrow-click {
+  grid-area: 3/1/4/3;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  height: 4vh;
+}
+
+.arrow-click img {
+  justify-content: right;
+  height: 31%;
+}
+
+.downloadcvbutton img {
+  justify-content: right;
+  height: 70%;
+}
+
+.downloadcvbutton span.collaboration {
+  margin-right: 5%;
+}
+
+.downloadcvbutton {
   background-color: black;
   width: 100%;
   height: 6vh;
   align-self: center;
   margin-top: 2vh;
   margin-bottom: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
-.blockImage {
-  width: 100%;
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 60vh;
+  margin-top: 5%;
+}
+
+.cards h2 {
+  margin-left: 3em;
+}
+
+.cards ul {
+  margin-left: 2em;
+  margin-bottom: 0;
+}
+
+.cards figure {
+  margin-top: 0;
   display: block;
+}
+
+.cards.first {
+  background-color: #1c528a;
+}
+
+.cards img {
+  height: 8em;
+  width: 8em;
+  justify-content: center;
+  margin-left: 65%;
+  display: block;
+}
+
+.cards.second {
+  background-color: #e2505c;
+}
+
+.cards.third {
+  background-color: #febf52;
+}
+
+.code-buttons {
+  grid-area: 2/1/4/4;
+}
+
+.code-buttons button {
+  line-height: 80%;
+  font-weight: 300;
+  background-color: #98dede;
+  width: auto;
+  height: 30%;
+  color: #1a2236;
+  display: inline-block;
+}
+
+.wrapper {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-row-gap: 4vh;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  background-color: black;
+  font-family: poppinsregular, Helvetica, sans-serif;
+  min-height: 35vh;
+  border: 0.333333px solid black;
+  backdrop-filter: blur(1px);
+  border-left-width: 3vh;
+  border-bottom-width: 3vh;
+  justify-content: space-between;
+}
+
+.grid-container p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 80%;
+  color: white;
+  grid-area: 1/1/4/4;
+}
+
+.grid-container button.arrow-click {
+  color: white;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  width: auto;
+  height: auto;
+  background-color: black;
+  border: 1px solid #ffff;
 }
 
 .collaboration {
@@ -87,6 +234,15 @@ p {
   font-size: 16px;
   font-style: normal;
   line-height: 24px;
+}
+
+.collaborationbutton {
+  background-color: black;
+  width: 100%;
+  height: 6vh;
+  align-self: center;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
 .collaborationbutton span.collaboration:hover {
