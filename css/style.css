@@ -176,14 +176,40 @@ p {
 
 .code-buttons {
   grid-area: 2/1/4/4;
+  max-height: 40%;
+  min-width: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.code-buttons ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  min-width: 100%;
+  min-height: 70%;
+  flex-wrap: wrap;
+}
+
+.code-buttons li {
+  min-width: 33%;
+  min-height: 60%;
+  display: flex;
+  align-content: center;
 }
 
 .code-buttons button {
   line-height: 80%;
   font-weight: 300;
+  min-width: 20%;
+  min-height: 40%;
   background-color: #98dede;
-  width: auto;
-  height: 30%;
   color: #1a2236;
   display: inline-block;
 }
@@ -195,9 +221,9 @@ p {
 
 .grid-container {
   display: grid;
-  grid-row-gap: 4vh;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto;
+  grid-row-gap: 7%;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 25% 25% 25%;
   background-color: black;
   font-family: poppinsregular, Helvetica, sans-serif;
   min-height: 35vh;
@@ -209,11 +235,14 @@ p {
 }
 
 .grid-container p {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 300;
   line-height: 80%;
+  max-width: 80%;
+  max-height: 25%;
   color: white;
   grid-area: 1/1/4/4;
+  margin-bottom: 0;
 }
 
 .grid-container button.arrow-click {
