@@ -36,6 +36,11 @@ h2 {
   color: #ffff;
 }
 
+button:active {
+  background-color: darkgreen;
+  transform: translateY(4px);
+}
+
 ul.navbar {
   list-style: none;
 }
@@ -131,6 +136,14 @@ p {
   flex-direction: row;
 }
 
+.downloadcvbutton:hover {
+  background-color: lawngreen;
+}
+
+.downloadcvbutton:disabled {
+  background-color: darkgrey;
+}
+
 .cards {
   display: flex;
   justify-content: space-between;
@@ -174,46 +187,6 @@ p {
   background-color: #febf52;
 }
 
-.code-buttons {
-  grid-area: 2/1/4/4;
-  max-height: 40%;
-  min-width: auto;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.code-buttons ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: center;
-  margin-left: 0;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  min-width: 100%;
-  min-height: 70%;
-  flex-wrap: wrap;
-}
-
-.code-buttons li {
-  min-width: 33%;
-  min-height: 60%;
-  display: flex;
-  align-content: center;
-}
-
-.code-buttons button {
-  line-height: 80%;
-  font-weight: 300;
-  min-width: 20%;
-  min-height: 40%;
-  background-color: #98dede;
-  color: #1a2236;
-  display: inline-block;
-}
-
 .wrapper {
   margin-top: 0;
   margin-bottom: 0;
@@ -234,7 +207,7 @@ p {
   justify-content: space-between;
 }
 
-.grid-container p {
+.grid-container h2 {
   font-size: 25px;
   font-weight: 300;
   line-height: 80%;
@@ -256,6 +229,18 @@ p {
   border: 1px solid #ffff;
 }
 
+.grid-container button.arrow-click:disabled {
+  background-color: darkgray;
+}
+
+.grid-container button.arrow-click:hover {
+  background-color: lawngreen;
+}
+
+.grid-container button.arrow-click:active {
+  background-color: darkgreen;
+}
+
 .collaboration {
   color: white;
   font-family: poppinsregular, Helvetica, sans-serif;
@@ -274,7 +259,102 @@ p {
   margin-bottom: 2vh;
 }
 
+.collaborationbutton:hover {
+  background-color: lawngreen;
+}
+
+.collaborationbutton:active {
+  background-color: darkgreen;
+}
+
+.collaborationbutton:disabled {
+  background-color: darkgray;
+}
+
 .collaborationbutton span.collaboration:hover {
   border: 1px solid red;
   text-decoration: underline blue;
+}
+
+.code-buttons {
+  grid-area: 2/1/4/4;
+  max-height: 40%;
+  min-width: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.code-buttons ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: space-around;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  min-width: 100%;
+  min-height: 70%;
+  flex-wrap: wrap;
+}
+
+.code-buttons li {
+  min-width: 20%;
+  min-height: 60%;
+  line-height: 70%;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  margin-right: 3%;
+  padding: 2%;
+  border: 1px solid grey;
+  background-color: #98dede;
+  color: #1a2236;
+}
+
+.code-buttons li:disabled {
+  background-color: lightcyan;
+}
+
+.code-buttons li:hover {
+  background-color: lightgreen;
+}
+
+.code-buttons button {
+  line-height: 80%;
+  font-weight: 300;
+  min-width: 20%;
+  min-height: 40%;
+  background-color: #98dede;
+  color: #1a2236;
+  display: inline-block;
+}
+
+.code-buttons a {
+  line-height: 80%;
+  font-weight: 300;
+  min-width: 20%;
+  min-height: 40%;
+  background-color: #98dede;
+  text-align: center;
+  color: #1a2236;
+  display: block;
+  margin: 5%;
+  text-decoration: none;
+  border: 1px solid grey;
+}
+
+.code-buttons button:disabled {
+  background-color: lightcyan;
+}
+
+.code-buttons button:hover {
+  background-color: lawngreen;
+}
+
+.code-buttons button:active {
+  background-color: darkgreen;
 }
