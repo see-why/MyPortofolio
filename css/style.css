@@ -271,11 +271,6 @@ p {
   background-color: darkgray;
 }
 
-.collaborationbutton span.collaboration:hover {
-  border: 1px solid red;
-  text-decoration: underline blue;
-}
-
 .code-buttons {
   grid-area: 2/1/4/4;
   max-height: 40%;
