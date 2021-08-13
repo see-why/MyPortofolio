@@ -13,12 +13,32 @@ body {
   background-color: white;
 }
 
+figure {
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+
 h1 {
   font-family: playfair_displayregular, Helvetica, sans-serif;
   font-size: 50px;
   font-weight: 200;
   line-height: 100%;
   margin-bottom: 2%;
+}
+
+h2 {
+  font-family: poppinsregular, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffff;
+}
+
+button:active {
+  background-color: darkgreen;
+  transform: translateY(4px);
 }
 
 ul.navbar {
@@ -31,6 +51,29 @@ p {
   font-weight: normal;
   line-height: 21px;
   letter-spacing: -0.01em;
+}
+
+.blockImage {
+  width: 100%;
+  display: block;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
+  justify-content: space-around;
+}
+
+.content ul {
+  color: #ffff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  letter-spacing: -0.0525em;
+  font-family: poppinsregular, Helvetica, sans-serif;
 }
 
 .container {
@@ -46,15 +89,6 @@ p {
   -webkit-overflow-scrolling: touch;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 5%;
-  padding-left: 2%;
-  padding-right: 2%;
-  justify-content: space-around;
-}
-
 .header {
   display: flex;
   align-items: center;
@@ -66,18 +100,145 @@ p {
   margin-right: 2%;
 }
 
-.collaborationbutton {
+.arrow-click {
+  grid-area: 3/1/4/3;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  height: 4vh;
+}
+
+.arrow-click img {
+  justify-content: right;
+  height: 31%;
+}
+
+.downloadcvbutton img {
+  justify-content: right;
+  height: 70%;
+}
+
+.downloadcvbutton span.collaboration {
+  margin-right: 5%;
+}
+
+.downloadcvbutton {
   background-color: black;
   width: 100%;
   height: 6vh;
   align-self: center;
   margin-top: 2vh;
   margin-bottom: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
-.blockImage {
-  width: 100%;
+.downloadcvbutton:hover {
+  background-color: lawngreen;
+}
+
+.downloadcvbutton:disabled {
+  background-color: darkgrey;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 60vh;
+  margin-top: 5%;
+}
+
+.cards h2 {
+  margin-left: 3em;
+}
+
+.cards ul {
+  margin-left: 2em;
+  margin-bottom: 0;
+}
+
+.cards figure {
+  margin-top: 0;
   display: block;
+}
+
+.cards.first {
+  background-color: #1c528a;
+}
+
+.cards img {
+  height: 8em;
+  width: 8em;
+  justify-content: center;
+  margin-left: 65%;
+  display: block;
+}
+
+.cards.second {
+  background-color: #e2505c;
+}
+
+.cards.third {
+  background-color: #febf52;
+}
+
+.wrapper {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-row-gap: 7%;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 25% 25% 25%;
+  background-color: black;
+  font-family: poppinsregular, Helvetica, sans-serif;
+  min-height: 35vh;
+  border: 0.333333px solid black;
+  backdrop-filter: blur(1px);
+  border-left-width: 3vh;
+  border-bottom-width: 3vh;
+  justify-content: space-between;
+}
+
+.grid-container h2 {
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 80%;
+  max-width: 80%;
+  max-height: 25%;
+  color: white;
+  grid-area: 1/1/4/4;
+  margin-bottom: 0;
+}
+
+.grid-container button.arrow-click {
+  color: white;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  width: auto;
+  height: auto;
+  background-color: black;
+  border: 1px solid #ffff;
+}
+
+.grid-container button.arrow-click:disabled {
+  background-color: darkgray;
+}
+
+.grid-container button.arrow-click:hover {
+  background-color: lawngreen;
+}
+
+.grid-container button.arrow-click:active {
+  background-color: darkgreen;
 }
 
 .collaboration {
@@ -89,7 +250,106 @@ p {
   line-height: 24px;
 }
 
-.collaborationbutton span.collaboration:hover {
-  border: 1px solid red;
-  text-decoration: underline blue;
+.collaborationbutton {
+  background-color: black;
+  width: 100%;
+  height: 6vh;
+  align-self: center;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.collaborationbutton:hover {
+  background-color: lawngreen;
+}
+
+.collaborationbutton:active {
+  background-color: darkgreen;
+}
+
+.collaborationbutton:disabled {
+  background-color: darkgray;
+}
+
+.code-buttons {
+  grid-area: 2/1/4/4;
+  max-height: 40%;
+  min-width: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.code-buttons ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: space-around;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  min-width: 100%;
+  min-height: 70%;
+  flex-wrap: wrap;
+}
+
+.code-buttons li {
+  min-width: 20%;
+  min-height: 60%;
+  line-height: 70%;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  margin-right: 3%;
+  padding: 2%;
+  border: 1px solid grey;
+  background-color: #98dede;
+  color: #1a2236;
+}
+
+.code-buttons li:disabled {
+  background-color: lightcyan;
+}
+
+.code-buttons li:hover {
+  background-color: lightgreen;
+}
+
+.code-buttons button {
+  line-height: 80%;
+  font-weight: 300;
+  min-width: 20%;
+  min-height: 40%;
+  background-color: #98dede;
+  color: #1a2236;
+  display: inline-block;
+}
+
+.code-buttons a {
+  line-height: 80%;
+  font-weight: 300;
+  min-width: 20%;
+  min-height: 40%;
+  background-color: #98dede;
+  text-align: center;
+  color: #1a2236;
+  display: block;
+  margin: 5%;
+  text-decoration: none;
+  border: 1px solid grey;
+}
+
+.code-buttons button:disabled {
+  background-color: lightcyan;
+}
+
+.code-buttons button:hover {
+  background-color: lawngreen;
+}
+
+.code-buttons button:active {
+  background-color: darkgreen;
 }
