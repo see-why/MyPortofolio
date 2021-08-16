@@ -299,10 +299,7 @@ p {
   min-height: 60%;
   line-height: 70%;
   font-weight: 300;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
+  float: left;
   margin-right: 3%;
   padding: 2%;
   border: 1px solid grey;
