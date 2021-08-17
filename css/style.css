@@ -13,6 +13,22 @@ body {
   background-color: white;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  background: #1a2236;
+  align-content: center;
+  justify-content: center;
+  min-height: 20%;
+}
+
+footer ul {
+  list-style: none;
+  margin-left: 2%;
+  margin-right: 2%;  
+  min-height: 20%;
+}
+
 figure {
   margin-bottom: 0;
   margin-left: 0;
@@ -56,6 +72,13 @@ p {
 .blockImage {
   width: 100%;
   display: block;
+}
+
+.footer-imagelist {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 0;
 }
 
 .content {
@@ -123,8 +146,42 @@ p {
   margin-right: 5%;
 }
 
+.footer-get-resume {
+  background-color: #1a2236;;
+  width: 50%;
+  min-height: 20%;
+  align-self: left;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  margin-left: 2.5%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: left;
+  flex-direction: row;
+  border: none; 
+}
+
+.footer-get-resume img {
+  margin-left: 10%;
+}
+
+.footer-get-resume span {
+  color: #92DCDC;
+  font-size: 16px;
+}
+
+.footer-get-resume:hover {
+  background-color: lawngreen;
+}
+
+.footer-get-resume:disabled {
+  background-color: darkgrey;
+}
+
+
 .downloadcvbutton {
-  background-color: black;
+  background-color: #1a2236;;
   width: 100%;
   height: 6vh;
   align-self: center;
@@ -352,4 +409,8 @@ p {
 
 .code-buttons button:active {
   background-color: darkgreen;
+}
+
+.contact-form-image {
+  margin-top: 4%;
 }
