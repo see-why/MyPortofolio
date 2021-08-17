@@ -16,7 +16,6 @@ body {
 textarea {
   min-height: 112px;
   border-radius: 4px;
-  font-family: Poppins;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -454,6 +453,11 @@ p {
   padding: 2% 2%;
 }
 
+.contact-form-fieldset label:hover, label:active {
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
 .contact-form-fieldset input {
   border: none;
   font-family: 'poppinsregular', Helvetica, sans-serif;
@@ -462,6 +466,10 @@ p {
   font-size: 14px;
   line-height: 21px;
   color: #1a2236;
+}
+
+.contact-form-fieldset input.focus-visible {
+  outline: none;
 }
 
 .contact-form-fieldset input::placeholder {
