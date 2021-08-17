@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  font-family: playfair_displayregular, Helvetica, sans-serif, Poppin;
+  font-family: 'playfair_displayregular', Helvetica, sans-serif, Poppin;
   margin: 0;
   background-color: white;
 }
@@ -21,7 +21,7 @@ figure {
 }
 
 h1 {
-  font-family: playfair_displayregular, Helvetica, sans-serif;
+  font-family: 'playfair_displayregular', Helvetica, sans-serif;
   font-size: 50px;
   font-weight: 200;
   line-height: 100%;
@@ -29,7 +29,7 @@ h1 {
 }
 
 h2 {
-  font-family: poppinsregular, Helvetica, sans-serif;
+  font-family: 'poppinsregular', Helvetica, sans-serif;
   font-weight: 800;
   font-size: 20px;
   line-height: 30px;
@@ -47,7 +47,7 @@ ul.navbar {
 
 p {
   font-size: 14px;
-  font-family: poppinsregular, Helvetica, sans-serif;
+  font-family: 'poppinsregular', Helvetica, sans-serif;
   font-weight: normal;
   line-height: 21px;
   letter-spacing: -0.01em;
@@ -73,7 +73,7 @@ p {
   font-weight: 600;
   line-height: 27px;
   letter-spacing: -0.0525em;
-  font-family: poppinsregular, Helvetica, sans-serif;
+  font-family: 'poppinsregular', Helvetica, sans-serif;
 }
 
 .container {
@@ -198,7 +198,7 @@ p {
   grid-template-columns: 30% 30% 30%;
   grid-template-rows: 25% 25% 25%;
   background-color: black;
-  font-family: poppinsregular, Helvetica, sans-serif;
+  font-family: 'poppinsregular', Helvetica, sans-serif;
   min-height: 35vh;
   border: 0.333333px solid black;
   backdrop-filter: blur(1px);
@@ -243,7 +243,7 @@ p {
 
 .collaboration {
   color: white;
-  font-family: poppinsregular, Helvetica, sans-serif;
+  font-family: 'poppinsregular', Helvetica, sans-serif;
   font-weight: 600;
   font-size: 16px;
   font-style: normal;
