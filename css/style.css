@@ -37,7 +37,7 @@ footer {
 footer ul {
   list-style: none;
   margin-left: 2%;
-  margin-right: 2%;  
+  margin-right: 2%;
   min-height: 20%;
 }
 
@@ -102,6 +102,10 @@ p {
   justify-content: space-around;
 }
 
+.content p {
+  text-align: justify;
+}
+
 .content ul {
   color: #ffff;
   font-size: 18px;
@@ -159,10 +163,9 @@ p {
 }
 
 .footer-get-resume {
-  background-color: #1a2236;;
+  background-color: #1a2236;
   width: 50%;
   min-height: 20%;
-  align-self: left;
   margin-top: 2vh;
   margin-bottom: 2vh;
   margin-left: 2.5%;
@@ -171,7 +174,7 @@ p {
   align-content: center;
   justify-content: left;
   flex-direction: row;
-  border: none; 
+  border: none;
 }
 
 .footer-get-resume img {
@@ -179,7 +182,7 @@ p {
 }
 
 .footer-get-resume span {
-  color: #92DCDC;
+  color: #92dcdc;
   font-size: 16px;
 }
 
@@ -191,9 +194,8 @@ p {
   background-color: darkgrey;
 }
 
-
 .downloadcvbutton {
-  background-color: #1a2236;;
+  background-color: #1a2236;
   width: 100%;
   height: 6vh;
   align-self: center;
@@ -277,7 +279,7 @@ p {
 }
 
 .grid-container h2 {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 300;
   line-height: 80%;
   max-width: 80%;
@@ -453,7 +455,9 @@ p {
   padding: 2% 2%;
 }
 
-.contact-form-fieldset label:hover, label:active {
+label.fieldset-label:hover,
+label.fieldset-label:active,
+textarea:hover {
   border: 1px solid black;
   border-radius: 4px;
 }
@@ -468,7 +472,7 @@ p {
   color: #1a2236;
 }
 
-.contact-form-fieldset input.focus-visible {
+.contact-form-fieldset input:focus {
   outline: none;
 }
 
