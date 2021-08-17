@@ -13,6 +13,19 @@ body {
   background-color: white;
 }
 
+textarea {
+  min-height: 112px;
+  border-radius: 4px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #7d7c84;
+  font-family: 'poppinsregular', Helvetica, sans-serif;
+  padding: 2% 2%;
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -413,4 +426,49 @@ p {
 
 .contact-form-image {
   margin-top: 4%;
+}
+
+.contact-form-fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  padding: 0;
+}
+
+.contact-form-fieldset label.contact-form-fieldset-email {
+  border: 1px solid #1a2236;
+}
+
+.contact-form-fieldset label {
+  display: flex;
+  flex-direction: column;
+  font-family: 'poppinsregular', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 15px;
+  color: #7d7c84;
+  margin-bottom: 2%;
+  border: 1px solid #dfdfe0;
+  border-radius: 4px;
+  padding: 2% 2%;
+}
+
+.contact-form-fieldset input {
+  border: none;
+  font-family: 'poppinsregular', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1a2236;
+}
+
+.contact-form-fieldset input::placeholder {
+  font-family: 'poppinsregular', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1a2236;
 }
