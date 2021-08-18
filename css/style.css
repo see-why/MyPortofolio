@@ -14,13 +14,20 @@ body {
 }
 
 textarea {
+  color: #1a2236;
+}
+
+textarea::placeholder {
+  color: #7d7c84;
+}
+
+.textarea-text {
   min-height: 112px;
   border-radius: 4px;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
-  color: #7d7c84;
   font-family: 'poppinsregular', Helvetica, sans-serif;
   padding: 2% 2%;
 }
@@ -67,9 +74,8 @@ h2 {
   color: #ffff;
 }
 
-button:active {
-  background-color: darkgreen;
-  transform: translateY(4px);
+button {
+  cursor: pointer;
 }
 
 ul.navbar {
@@ -148,15 +154,39 @@ p {
 
 .arrow-click img {
   justify-content: right;
-  height: 31%;
+  height: 40%;
 }
 
-.downloadcvbutton img {
+.arrow-click img.display-hover {
+  display: none;
+}
+
+.download-cv-button img.display-hover {
+  display: none;
+}
+
+.arrow-click:hover img.display-hover {
+  display: inline;
+}
+
+.arrow-click:hover img.display-first {
+  display: none;
+}
+
+.cards img {
+  height: 8em;
+  width: 8em;
+  justify-content: center;
+  margin-left: 65%;
+  display: block;
+}
+
+.download-cv-button img {
   justify-content: right;
   height: 70%;
 }
 
-.downloadcvbutton span.collaboration {
+.download-cv-button span.collaboration-button-span {
   margin-right: 5%;
 }
 
@@ -183,15 +213,7 @@ p {
   font-size: 16px;
 }
 
-.footer-get-resume:hover {
-  background-color: lawngreen;
-}
-
-.footer-get-resume:disabled {
-  background-color: darkgrey;
-}
-
-.downloadcvbutton {
+.download-cv-button {
   background-color: #1a2236;
   width: 100%;
   height: 6vh;
@@ -201,13 +223,18 @@ p {
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  border: none;
 }
 
-.downloadcvbutton:hover {
-  background-color: lawngreen;
+.download-cv-button:hover img.display-hover {
+  display: inline;
 }
 
-.downloadcvbutton:disabled {
+.download-cv-button:hover img.display-first {
+  display: none;
+}
+
+.download-cv-button:disabled {
   background-color: darkgrey;
 }
 
@@ -235,14 +262,6 @@ p {
 
 .cards.first {
   background-color: #1c528a;
-}
-
-.cards img {
-  height: 8em;
-  width: 8em;
-  justify-content: center;
-  margin-left: 65%;
-  display: block;
 }
 
 .cards.second {
@@ -300,15 +319,16 @@ p {
 }
 
 .grid-container button.arrow-click:hover {
-  background-color: lawngreen;
+  color: #1a2236;
+  background-color: #ffff;
 }
 
 .grid-container button.arrow-click:active {
-  background-color: darkgreen;
+  border: 2px solid #1a2236;
 }
 
-.collaboration {
-  color: white;
+.collaboration-button-span {
+  color: #ffff;
   font-family: 'poppinsregular', Helvetica, sans-serif;
   font-weight: 600;
   font-size: 16px;
@@ -316,24 +336,33 @@ p {
   line-height: 24px;
 }
 
-.collaborationbutton {
+.collaboration-button {
   background-color: black;
   width: 100%;
   height: 6vh;
   align-self: center;
   margin-top: 2vh;
   margin-bottom: 2vh;
+  border: none;
 }
 
-.collaborationbutton:hover {
-  background-color: lawngreen;
+.collaboration-button:hover,
+.download-cv-button:hover {
+  background-color: #ffff;
+  border: 1px solid #1a2236;
 }
 
-.collaborationbutton:active {
-  background-color: darkgreen;
+.collaboration-button:hover span,
+.download-cv-button:hover span {
+  color: black;
 }
 
-.collaborationbutton:disabled {
+.collaboration-button:active,
+.download-cv-button:active {
+  border: 2px solid #1a2236;
+}
+
+.collaboration-button:disabled {
   background-color: darkgray;
 }
 
@@ -373,14 +402,6 @@ p {
   color: #1a2236;
 }
 
-.code-buttons li:disabled {
-  background-color: lightcyan;
-}
-
-.code-buttons li:hover {
-  background-color: lightgreen;
-}
-
 .code-buttons button {
   line-height: 80%;
   font-weight: 300;
@@ -403,18 +424,6 @@ p {
   margin: 5%;
   text-decoration: none;
   border: 1px solid grey;
-}
-
-.code-buttons button:disabled {
-  background-color: lightcyan;
-}
-
-.code-buttons button:hover {
-  background-color: lawngreen;
-}
-
-.code-buttons button:active {
-  background-color: darkgreen;
 }
 
 .contact-form-image {
