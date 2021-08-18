@@ -8,9 +8,47 @@ html {
 }
 
 body {
-  font-family: playfair_displayregular, Helvetica, sans-serif, Poppin;
+  font-family: 'playfair_displayregular', Helvetica, sans-serif, Poppin;
   margin: 0;
   background-color: white;
+}
+
+textarea {
+  color: #1a2236;
+}
+
+textarea::placeholder {
+  color: #7d7c84;
+}
+
+.textarea-text {
+  min-height: 112px;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: 'poppinsregular', Helvetica, sans-serif;
+  padding: 2% 2%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+footer {
+  flex-direction: column;
+  background: #1a2236;
+  align-content: center;
+  justify-content: center;
+  min-height: 20%;
+}
+
+footer ul {
+  list-style: none;
+  margin-left: 2%;
+  margin-right: 2%;
+  min-height: 20%;
 }
 
 figure {
@@ -20,8 +58,8 @@ figure {
   width: 100%;
 }
 
-h1 {
-  font-family: playfair_displayregular, Helvetica, sans-serif;
+.h1-style {
+  font-family: 'playfair_displayregular', Helvetica, sans-serif;
   font-size: 50px;
   font-weight: 200;
   line-height: 100%;
@@ -29,16 +67,15 @@ h1 {
 }
 
 h2 {
-  font-family: poppinsregular, Helvetica, sans-serif;
+  font-family: 'poppinsregular', Helvetica, sans-serif;
   font-weight: 800;
   font-size: 20px;
   line-height: 30px;
   color: #ffff;
 }
 
-button:active {
-  background-color: darkgreen;
-  transform: translateY(4px);
+button {
+  cursor: pointer;
 }
 
 ul.navbar {
@@ -47,7 +84,7 @@ ul.navbar {
 
 p {
   font-size: 14px;
-  font-family: poppinsregular, Helvetica, sans-serif;
+  font-family: 'poppinsregular', Helvetica, sans-serif;
   font-weight: normal;
   line-height: 21px;
   letter-spacing: -0.01em;
@@ -58,13 +95,22 @@ p {
   display: block;
 }
 
+.footer-imagelist {
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 0;
+}
+
 .content {
-  display: flex;
   flex-direction: column;
   margin-bottom: 5%;
   padding-left: 2%;
   padding-right: 2%;
   justify-content: space-around;
+}
+
+.content p {
+  text-align: justify;
 }
 
 .content ul {
@@ -73,7 +119,7 @@ p {
   font-weight: 600;
   line-height: 27px;
   letter-spacing: -0.0525em;
-  font-family: poppinsregular, Helvetica, sans-serif;
+  font-family: 'poppinsregular', Helvetica, sans-serif;
 }
 
 .container {
@@ -82,7 +128,6 @@ p {
   margin: 5vh auto;
   border: none;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow-y: auto;
@@ -90,7 +135,6 @@ p {
 }
 
 .header {
-  display: flex;
   align-items: center;
   justify-content: space-between;
   border-right-width: 0.2vh;
@@ -102,7 +146,6 @@ p {
 
 .arrow-click {
   grid-area: 3/1/4/3;
-  display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: row;
@@ -111,41 +154,91 @@ p {
 
 .arrow-click img {
   justify-content: right;
-  height: 31%;
+  height: 40%;
 }
 
-.downloadcvbutton img {
+.arrow-click img.display-hover {
+  display: none;
+}
+
+.download-cv-button img.display-hover {
+  display: none;
+}
+
+.arrow-click:hover img.display-hover {
+  display: inline;
+}
+
+.arrow-click:hover img.display-first {
+  display: none;
+}
+
+.cards img {
+  height: 8em;
+  width: 8em;
+  justify-content: center;
+  margin-left: 65%;
+  display: block;
+}
+
+.download-cv-button img {
   justify-content: right;
   height: 70%;
 }
 
-.downloadcvbutton span.collaboration {
+.download-cv-button span.collaboration-button-span {
   margin-right: 5%;
 }
 
-.downloadcvbutton {
-  background-color: black;
+.footer-get-resume {
+  background-color: #1a2236;
+  width: 50%;
+  min-height: 20%;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  margin-left: 2.5%;
+  align-items: center;
+  align-content: center;
+  justify-content: left;
+  flex-direction: row;
+  border: none;
+}
+
+.footer-get-resume img {
+  margin-left: 10%;
+}
+
+.footer-get-resume span {
+  color: #92dcdc;
+  font-size: 16px;
+}
+
+.download-cv-button {
+  background-color: #1a2236;
   width: 100%;
   height: 6vh;
   align-self: center;
   margin-top: 2vh;
   margin-bottom: 2vh;
-  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  border: none;
 }
 
-.downloadcvbutton:hover {
-  background-color: lawngreen;
+.download-cv-button:hover img.display-hover {
+  display: inline;
 }
 
-.downloadcvbutton:disabled {
+.download-cv-button:hover img.display-first {
+  display: none;
+}
+
+.download-cv-button:disabled {
   background-color: darkgrey;
 }
 
 .cards {
-  display: flex;
   justify-content: space-between;
   flex-direction: column;
   flex-wrap: wrap;
@@ -171,14 +264,6 @@ p {
   background-color: #1c528a;
 }
 
-.cards img {
-  height: 8em;
-  width: 8em;
-  justify-content: center;
-  margin-left: 65%;
-  display: block;
-}
-
 .cards.second {
   background-color: #e2505c;
 }
@@ -198,7 +283,7 @@ p {
   grid-template-columns: 30% 30% 30%;
   grid-template-rows: 25% 25% 25%;
   background-color: black;
-  font-family: poppinsregular, Helvetica, sans-serif;
+  font-family: 'poppinsregular', Helvetica, sans-serif;
   min-height: 35vh;
   border: 0.333333px solid black;
   backdrop-filter: blur(1px);
@@ -208,7 +293,7 @@ p {
 }
 
 .grid-container h2 {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 300;
   line-height: 80%;
   max-width: 80%;
@@ -234,40 +319,50 @@ p {
 }
 
 .grid-container button.arrow-click:hover {
-  background-color: lawngreen;
+  color: #1a2236;
+  background-color: #ffff;
 }
 
 .grid-container button.arrow-click:active {
-  background-color: darkgreen;
+  border: 2px solid #1a2236;
 }
 
-.collaboration {
-  color: white;
-  font-family: poppinsregular, Helvetica, sans-serif;
+.collaboration-button-span {
+  color: #ffff;
+  font-family: 'poppinsregular', Helvetica, sans-serif;
   font-weight: 600;
   font-size: 16px;
   font-style: normal;
   line-height: 24px;
 }
 
-.collaborationbutton {
+.collaboration-button {
   background-color: black;
   width: 100%;
   height: 6vh;
   align-self: center;
   margin-top: 2vh;
   margin-bottom: 2vh;
+  border: none;
 }
 
-.collaborationbutton:hover {
-  background-color: lawngreen;
+.collaboration-button:hover,
+.download-cv-button:hover {
+  background-color: #ffff;
+  border: 1px solid #1a2236;
 }
 
-.collaborationbutton:active {
-  background-color: darkgreen;
+.collaboration-button:hover span,
+.download-cv-button:hover span {
+  color: black;
 }
 
-.collaborationbutton:disabled {
+.collaboration-button:active,
+.download-cv-button:active {
+  border: 2px solid #1a2236;
+}
+
+.collaboration-button:disabled {
   background-color: darkgray;
 }
 
@@ -275,13 +370,11 @@ p {
   grid-area: 2/1/4/4;
   max-height: 40%;
   min-width: auto;
-  display: flex;
   flex-wrap: wrap;
 }
 
-.code-buttons ul {
+.code-buttons ul.d-flex {
   list-style: none;
-  display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-content: space-around;
@@ -294,12 +387,11 @@ p {
   flex-wrap: wrap;
 }
 
-.code-buttons li {
+.code-buttons li.d-flex {
   min-width: 20%;
   min-height: 60%;
   line-height: 70%;
   font-weight: 300;
-  display: flex;
   justify-content: center;
   align-content: center;
   flex-direction: column;
@@ -308,14 +400,6 @@ p {
   border: 1px solid grey;
   background-color: #98dede;
   color: #1a2236;
-}
-
-.code-buttons li:disabled {
-  background-color: lightcyan;
-}
-
-.code-buttons li:hover {
-  background-color: lightgreen;
 }
 
 .code-buttons button {
@@ -342,14 +426,60 @@ p {
   border: 1px solid grey;
 }
 
-.code-buttons button:disabled {
-  background-color: lightcyan;
+.contact-form-image {
+  margin-top: 4%;
 }
 
-.code-buttons button:hover {
-  background-color: lawngreen;
+.contact-form-fieldset {
+  flex-direction: column;
+  border: none;
+  padding: 0;
 }
 
-.code-buttons button:active {
-  background-color: darkgreen;
+.contact-form-fieldset label.contact-form-fieldset-email {
+  border: 1px solid #1a2236;
+}
+
+.contact-form-fieldset label.d-flex {
+  flex-direction: column;
+  font-family: 'poppinsregular', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 15px;
+  color: #7d7c84;
+  margin-bottom: 2%;
+  border: 1px solid #dfdfe0;
+  border-radius: 4px;
+  padding: 2% 2%;
+}
+
+label.fieldset-label:hover,
+label.fieldset-label:active,
+textarea:hover {
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.contact-form-fieldset input {
+  border: none;
+  font-family: 'poppinsregular', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1a2236;
+}
+
+.contact-form-fieldset input:focus {
+  outline: none;
+}
+
+.contact-form-fieldset input::placeholder {
+  font-family: 'poppinsregular', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1a2236;
 }
