@@ -25,8 +25,11 @@ textarea {
   padding: 2% 2%;
 }
 
-footer {
+.d-flex {
   display: flex;
+}
+
+footer {
   flex-direction: column;
   background: #1a2236;
   align-content: center;
@@ -87,14 +90,12 @@ p {
 }
 
 .footer-imagelist {
-  display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-left: 0;
 }
 
 .content {
-  display: flex;
   flex-direction: column;
   margin-bottom: 5%;
   padding-left: 2%;
@@ -121,7 +122,6 @@ p {
   margin: 5vh auto;
   border: none;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow-y: auto;
@@ -129,7 +129,6 @@ p {
 }
 
 .header {
-  display: flex;
   align-items: center;
   justify-content: space-between;
   border-right-width: 0.2vh;
@@ -141,7 +140,6 @@ p {
 
 .arrow-click {
   grid-area: 3/1/4/3;
-  display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: row;
@@ -169,7 +167,6 @@ p {
   margin-top: 2vh;
   margin-bottom: 2vh;
   margin-left: 2.5%;
-  display: flex;
   align-items: center;
   align-content: center;
   justify-content: left;
@@ -201,7 +198,6 @@ p {
   align-self: center;
   margin-top: 2vh;
   margin-bottom: 2vh;
-  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
@@ -216,7 +212,6 @@ p {
 }
 
 .cards {
-  display: flex;
   justify-content: space-between;
   flex-direction: column;
   flex-wrap: wrap;
@@ -346,13 +341,11 @@ p {
   grid-area: 2/1/4/4;
   max-height: 40%;
   min-width: auto;
-  display: flex;
   flex-wrap: wrap;
 }
 
-.code-buttons ul {
+.code-buttons ul.d-flex {
   list-style: none;
-  display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-content: space-around;
@@ -365,12 +358,11 @@ p {
   flex-wrap: wrap;
 }
 
-.code-buttons li {
+.code-buttons li.d-flex {
   min-width: 20%;
   min-height: 60%;
   line-height: 70%;
   font-weight: 300;
-  display: flex;
   justify-content: center;
   align-content: center;
   flex-direction: column;
@@ -430,7 +422,6 @@ p {
 }
 
 .contact-form-fieldset {
-  display: flex;
   flex-direction: column;
   border: none;
   padding: 0;
@@ -440,8 +431,7 @@ p {
   border: 1px solid #1a2236;
 }
 
-.contact-form-fieldset label {
-  display: flex;
+.contact-form-fieldset label.d-flex {
   flex-direction: column;
   font-family: 'poppinsregular', Helvetica, sans-serif;
   font-style: normal;
