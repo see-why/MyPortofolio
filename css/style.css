@@ -58,7 +58,7 @@ figure {
   width: 100%;
 }
 
-h1 {
+.h1-style {
   font-family: 'playfair_displayregular', Helvetica, sans-serif;
   font-size: 50px;
   font-weight: 200;
