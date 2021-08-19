@@ -98,11 +98,11 @@ p {
   font-weight: normal;
   line-height: 21px;
   letter-spacing: -0.01em;
-  animation-duration: 3s;
-  animation-name: slidein;
+  animation-duration: 5s;
+  animation-name: slide-in;
 }
 
-@keyframes slidein {
+@keyframes slide-in {
   from {
     margin-left: 100%;
     width: 300%;
