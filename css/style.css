@@ -98,6 +98,20 @@ p {
   font-weight: normal;
   line-height: 21px;
   letter-spacing: -0.01em;
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 .blockImage {
@@ -500,21 +514,4 @@ textarea:hover {
   font-size: 14px;
   line-height: 21px;
   color: #1a2236;
-}
-
-p {
-  animation-duration: 3s;
-  animation-name: slidein;
-}
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
 }
