@@ -510,8 +510,11 @@ textarea:hover {
     justify-content: center;
     width: 100%;
     background-color: #ffff;
-    margin-bottom: 5px;
     box-shadow: 0 0.5px 0 #dddfe6;
+  }
+
+  .content {
+    justify-content: space-evenly;
   }
 
   .header li {
@@ -544,14 +547,53 @@ textarea:hover {
 
   #landing-form {
     width: 40%;
+    height: 100%;
+    margin-left: 10%;
+    align-content: center;
+    margin-bottom: 0;
+    padding: 0;
   }
 
-  .blockImage {
-    width: 40%;
+  #landing-form p {
+    justify-content: left;
+    width: 80%;
+    margin: 0;
+  }
+
+  #landing-form .collaboration-button {
+    width: 50%;
+    height: 10%;
+    align-self: flex-start;
+    margin: 0;
+  }
+
+  .img-float-right .blockImage {
+    width: 100%;
+    content: url(/svg/hello_form_img_right.svg);
+  }
+
+  .landing-form-image {
+    width: 30%;
+    align-self: flex-end;
+  }
+
+  .flex-landing-form h1 {
+    font-size: 90px;
+  }
+
+  .flex-landing-form header {
+    margin-bottom: 1%;
+  }
+
+  .img-float-right {
+    width: 50%;
   }
 
   .flex-landing-form {
     flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 0;
   }
 
   .container {
