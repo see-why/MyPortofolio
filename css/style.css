@@ -64,6 +64,13 @@ figure {
   font-weight: 200;
   line-height: 100%;
   margin-bottom: 2%;
+  transition-property: font-size;
+  transition-duration: 3s;
+  transition-delay: 1s;
+}
+
+.h1-style:hover {
+  font-size: 60px;
 }
 
 h2 {
@@ -72,6 +79,9 @@ h2 {
   font-size: 20px;
   line-height: 30px;
   color: #ffff;
+  transition-property: font-size;
+  transition-duration: 3s;
+  transition-delay: 1s;
 }
 
 button {
@@ -88,6 +98,20 @@ p {
   font-weight: normal;
   line-height: 21px;
   letter-spacing: -0.01em;
+  animation-duration: 5s;
+  animation-name: slide-in;
+}
+
+@keyframes slide-in {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 .blockImage {
@@ -301,6 +325,14 @@ p {
   color: white;
   grid-area: 1/1/4/4;
   margin-bottom: 0;
+}
+
+.grid-container h2:hover {
+  font-size: 24px;
+}
+
+.cards h2:hover {
+  font-size: 25px;
 }
 
 .grid-container button.arrow-click {
