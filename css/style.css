@@ -512,7 +512,8 @@ textarea:hover {
   .about-form-and-skill-form,
   .Desktop-Get-started,
   .contact-form-image,
-  .form-fieldset-labels {
+  .form-fieldset-labels,
+  .align-header {
     display: flex;
   }
 
@@ -537,7 +538,7 @@ textarea:hover {
   }
 
   .header {
-    height: 12%;
+    min-height: 12%;
     align-content: space-around;
     justify-content: center;
     width: 100%;
@@ -600,7 +601,7 @@ textarea:hover {
   .landing-form .collaboration-button,
   .content .download-cv-button {
     width: 50%;
-    height: 10%;
+    height: 6%;
     align-self: flex-start;
     margin: 0;
   }
@@ -644,6 +645,10 @@ textarea:hover {
 
   form button.collaboration-button {
     width: 45%;
+  }
+
+  .contact-form-fieldset textarea {
+    border: 1px solid #e0e0e0;
   }
 
   div.form-fieldset-labels label.fieldset-label:hover,
@@ -947,12 +952,13 @@ textarea:hover {
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
-    height: 100%;
+    min-height: 90%;
   }
 
   .Desktop-Get-started section.desktop-contact-form p {
-    text-align: center;
     align-self: center;
+    width: 80%;
+    margin: 2% 1% 2% 1%;
   }
 
   .Desktop-Get-started section.desktop-contact-form form {
@@ -981,8 +987,9 @@ textarea:hover {
   }
 
   .Desktop-Get-started .content {
-    padding: 0;
     height: 100%;
+    justify-content: center;
+    padding: 0 4% 0 4%;
   }
 
   .Desktop-Get-started div.contact-form-image {
@@ -993,10 +1000,22 @@ textarea:hover {
   .desktop-footer {
     flex-direction: row;
     justify-content: space-around;
+    min-height: 10%;
   }
 
   .desktop-footer ul {
     align-items: center;
     width: 30%;
+  }
+
+  .desktop-contact-form .contact-form-fieldset {
+    width: 100%;
+    align-self: center;
+  }
+
+  .align-header {
+    flex-direction: column;
+    width: 90%;
+    align-self: center;
   }
 }
