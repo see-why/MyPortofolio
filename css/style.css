@@ -647,12 +647,28 @@ textarea:hover {
     width: 45%;
   }
 
+  .align-header label.textarea {
+    margin-top: 2%;
+    padding-left: 0;
+    border: none;
+  }
+
   .contact-form-fieldset textarea {
     border: 1px solid #e0e0e0;
   }
 
-  div.form-fieldset-labels label.fieldset-label:hover,
-  div.form-fieldset-labels label.fieldset-label:active,
+  div.form-fieldset-labels label.fieldset-label {
+    padding: 0;
+  }
+
+  div.form-fieldset-labels label.fieldset-label input {
+    border: 1px solid #e0e0e0;
+    min-height: 100%;
+    padding: 0 0 0 1%;
+  }
+
+  div.form-fieldset-labels label.fieldset-label input:hover,
+  div.form-fieldset-labels label.fieldset-label input:active,
   div.form-fieldset-labels textarea:hover {
     border: 1px solid black;
     border-radius: 4px;
