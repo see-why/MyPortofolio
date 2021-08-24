@@ -553,7 +553,7 @@ textarea:hover {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 100%;
-    background-image: url(/Images/project-background.png);
+    background-image: url(../Images/project-background.png);
     background-size: contain;
     resize: both;
     background-repeat: no-repeat;
@@ -648,7 +648,7 @@ textarea:hover {
 
   .img-float-right .blockImage {
     width: 100%;
-    content: url(/svg/hello_form_img_right.svg);
+    content: url(../svg/hello_form_img_right.svg);
   }
 
   .landing-form-image {
@@ -773,7 +773,7 @@ textarea:hover {
 
   .project-row-card figure {
     margin-top: 0;
-    background-image: url(/Images/project-image-1.jpg);
+    background-image: url(../Images/project-image-1.jpg);
     background-size: cover;
     height: 25%;
   }
@@ -808,13 +808,13 @@ textarea:hover {
   }
 
   .contact-form-image img {
-    content: url(/svg/get-started-right.svg);
+    content: url(../svg/get-started-right.svg);
     resize: both;
     align-self: flex-start;
   }
 
   .contact-form-image-right img {
-    content: url(/svg/get-started-left.svg);
+    content: url(../svg/get-started-left.svg);
     resize: both;
     align-self: flex-end;
   }
@@ -837,7 +837,7 @@ textarea:hover {
 
   .project-row-card button.arrow-click img,
   .aside button.arrow-click img {
-    content: url(/svg/ic_arrow_right_darktheme.svg);
+    content: url(../svg/ic_arrow_right_darktheme.svg);
   }
 
   .desktop-frame div.cards.third img {
@@ -853,7 +853,7 @@ textarea:hover {
 
   .project-row-card button.arrow-click:hover img,
   .aside button.arrow-click:hover img {
-    content: url(/svg/ic_arrowright.svg);
+    content: url(../svg/ic_arrowright.svg);
   }
 
   .project-row-card button.arrow-click:hover,
@@ -886,7 +886,7 @@ textarea:hover {
 
   .float-div figure.wrapper {
     margin-top: 0;
-    background-image: url(/Images/project-image-6.jpg);
+    background-image: url(../Images/project-image-6.jpg);
     background-size: cover;
     height: 25%;
   }
@@ -896,7 +896,7 @@ textarea:hover {
   }
 
   .grid-container-bottom {
-    content: url(/Images/project-image-5.jpg);
+    content: url(../Images/project-image-5.jpg);
     margin-top: 0;
     height: 30%;
   }
@@ -911,7 +911,7 @@ textarea:hover {
   }
 
   .desktop-version-project-2-card-figure div.first {
-    background-image: url(/Images/col-1-image.png);
+    background-image: url(../Images/col-1-image.png);
     background-size: contain;
     margin-top: 25%;
     width: 100%;
@@ -919,7 +919,7 @@ textarea:hover {
 
   .desktop-version-project-2-card-figure div.second {
     border-left: #ffff;
-    background-image: url(/Images/row-2-image.png);
+    background-image: url(../Images/row-2-image.png);
     background-size: cover;
     width: 100%;
   }
