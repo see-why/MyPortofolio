@@ -176,7 +176,7 @@ p {
 .fixed {
   position: sticky;
   top: 0;
-  background: white;
+  background: transparent;
   width: 100%;
 }
 
