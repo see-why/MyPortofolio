@@ -36,6 +36,9 @@ textarea::placeholder {
   padding: 2% 2%;
 }
 
+.dummy {
+  z-index: 8;
+}
 
 .d-flex {
   display: flex;
