@@ -185,6 +185,10 @@ li.mobile-nav-list-title {
   text-decoration: none;
 }
 
+.margin-left {
+  margin-left: 2%;
+}
+
 .code-buttons a {
   line-height: 80%;
   font-weight: 300;
