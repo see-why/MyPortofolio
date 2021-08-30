@@ -7,6 +7,10 @@ html {
   box-sizing: inherit;
 }
 
+.dummy {
+  z-index: 8;
+}
+
 *:focus-visible {
   outline: darkred solid 5px;
 }
