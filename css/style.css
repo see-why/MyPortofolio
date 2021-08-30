@@ -143,32 +143,34 @@ p {
 
 .mobile-nav {
   z-index: 9;
-  max-width: 70%;
-  max-height: 85%;
-  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
   flex-wrap: wrap;
-  overflow-y: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   background: #ffff;
   top: 5%;
-  border-bottom-right-radius: 30px;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .mobile-nav-bottom {
-  margin-top: 17%;
-  max-width: 100%;
+  min-width: 100%;
+  max-height: 30%;
 }
 
 .mobile-nav-bottom img {
-  max-width: 100%;
+  width: 100%;
 }
 
 .mobile-nav-top img.not-cross-img {
-  max-width: 80%;
+  min-width: 80%;
+  display: inline-block;
 }
 
 .mobile-nav-top div.cross-img-div {
-  max-width: 15%;
+  min-width: 15%;
 }
 
 div.cross-img-div img.cross-img {
@@ -185,7 +187,6 @@ div.cross-img-div img.cross-img {
   min-width: 100%;
   padding: 0;
   height: 80%;
-  margin-top: 18%;
 }
 
 .margin-top {
@@ -202,6 +203,10 @@ div.cross-img-div img.cross-img {
 .mobile-nav-menu-list a {
   text-decoration: none;
   color: black;
+}
+
+.mobile-nav-list {
+  width: 100%;
 }
 
 li.mobile-nav-list-title {
@@ -234,6 +239,7 @@ li.mobile-nav-list-title {
   height: 10%;
   margin-top: 7%;
   margin-right: 5%;
+  margin-left: 10%;
 }
 
 .header-img:hover {
@@ -247,6 +253,7 @@ li.mobile-nav-list-title {
 .mobile-nav-top {
   flex-direction: row;
   justify-content: space-between;
+  min-width: 100%;
 }
 
 .blockImage {
@@ -282,7 +289,6 @@ li.mobile-nav-list-title {
 }
 
 .container {
-  max-width: 600px;
   height: 100vh;
   margin: 5vh auto;
   border: none;
@@ -623,9 +629,14 @@ textarea:hover {
 }
 
 @media only screen and (min-width: 992px) {
+  .mobile-nav {
+    visibility: hidden;
+    display: none;
+    overflow: hidden;
+  }
+
   .header img,
   .header-img,
-  .mobile-nav,
   .project-row-card img.blockImage {
     display: none;
   }
@@ -831,6 +842,7 @@ textarea:hover {
     margin: 0;
     flex-direction: column;
     justify-content: space-between;
+    overflow-y: hidden;
   }
 
   .project-forms-header {
