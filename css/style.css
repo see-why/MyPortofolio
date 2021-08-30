@@ -40,6 +40,10 @@ textarea::placeholder {
   display: flex;
 }
 
+.show {
+  display: block;
+}
+
 footer {
   flex-direction: column;
   background: #1a2236;
@@ -106,7 +110,8 @@ ul.navbar {
 .project-forms-row,
 ul.navbar li:not(.header-img),
 .landing-form div.landing-form-image,
-.project-forms-row div.landing-form-image {
+.project-forms-row div.landing-form-image,
+.mobile-nav {
   display: none;
 }
 
@@ -130,6 +135,95 @@ p {
     margin-left: 0%;
     width: 100%;
   }
+}
+
+.mobile-nav {
+  z-index: 9;
+  max-width: 80%;
+  height: 75%;
+  position: fixed;
+  flex-wrap: wrap;
+  background: #ffff;
+  top: 5%;
+  border-bottom-right-radius: 30px;
+  flex-direction: column;
+}
+
+.mobile-nav-bottom {
+  margin-top: 17%;
+}
+
+.mobile-nav-menu-list {
+  list-style: none;
+  font-family: 'poppinsregular', Helvetica, sans-serif;
+  text-align: center;
+  flex-direction: column;
+  align-content: center;
+  width: 100%;
+  padding: 0;
+  height: 80%;
+  margin-top: 18%;
+}
+
+.margin-top {
+  margin-top: 4%;
+}
+
+.fixed {
+  position: sticky;
+  top: 0;
+  background: white;
+  width: 100%;
+}
+
+.mobile-nav-menu-list a {
+  text-decoration: none;
+  color: black;
+}
+
+li.mobile-nav-list-title {
+  text-decoration: none;
+}
+
+.margin-left {
+  margin-left: 2%;
+}
+
+.code-buttons a {
+  line-height: 80%;
+  font-weight: 300;
+  min-width: 20%;
+  min-height: 40%;
+  background-color: #98dede;
+  text-align: center;
+  color: #1a2236;
+  display: block;
+  margin: 5%;
+  text-decoration: none;
+  border: 1px solid grey;
+}
+
+.mobile-nav-menu-list a:hover {
+  border-bottom: 1px solid black;
+}
+
+.cross-img-div {
+  height: 10%;
+  margin-top: 7%;
+  margin-right: 5%;
+}
+
+.header-img:hover {
+  outline: 2px solid black;
+}
+
+.header-img:active {
+  outline: 4px solid black;
+}
+
+.mobile-nav-top {
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .blockImage {
@@ -199,18 +293,10 @@ p {
   height: 40%;
 }
 
-.arrow-click img.display-hover {
-  display: none;
-}
-
-.download-cv-button img.display-hover {
-  display: none;
-}
-
-.arrow-click:hover img.display-hover {
-  display: inline;
-}
-
+.arrow-click img.display-hover,
+.download-cv-button:hover img.display-first,
+.download-cv-button img.display-hover,
+.arrow-click:hover img.display-hover,
 .arrow-click:hover img.display-first {
   display: none;
 }
@@ -270,10 +356,6 @@ p {
 
 .download-cv-button:hover img.display-hover {
   display: inline;
-}
-
-.download-cv-button:hover img.display-first {
-  display: none;
 }
 
 .download-cv-button:disabled {
@@ -463,20 +545,6 @@ p {
   display: inline-block;
 }
 
-.code-buttons a {
-  line-height: 80%;
-  font-weight: 300;
-  min-width: 20%;
-  min-height: 40%;
-  background-color: #98dede;
-  text-align: center;
-  color: #1a2236;
-  display: block;
-  margin: 5%;
-  text-decoration: none;
-  border: 1px solid grey;
-}
-
 .contact-form-image {
   margin-top: 4%;
 }
@@ -534,6 +602,7 @@ textarea:hover {
 @media only screen and (min-width: 992px) {
   .header img,
   .header-img,
+  .mobile-nav,
   .project-row-card img.blockImage {
     display: none;
   }
