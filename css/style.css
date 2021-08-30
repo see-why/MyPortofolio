@@ -7,6 +7,10 @@ html {
   box-sizing: inherit;
 }
 
+.dummy {
+  z-index: 8;
+}
+
 *:focus-visible {
   outline: darkred solid 5px;
 }
@@ -38,6 +42,10 @@ textarea::placeholder {
 
 .d-flex {
   display: flex;
+}
+
+.show {
+  display: block;
 }
 
 footer {
@@ -106,7 +114,8 @@ ul.navbar {
 .project-forms-row,
 ul.navbar li:not(.header-img),
 .landing-form div.landing-form-image,
-.project-forms-row div.landing-form-image {
+.project-forms-row div.landing-form-image,
+.mobile-nav {
   display: none;
 }
 
@@ -130,6 +139,121 @@ p {
     margin-left: 0%;
     width: 100%;
   }
+}
+
+.mobile-nav {
+  z-index: 9;
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: #ffff;
+  top: 5%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobile-nav-bottom {
+  min-width: 100%;
+  max-height: 30%;
+}
+
+.mobile-nav-bottom img {
+  width: 100%;
+}
+
+.mobile-nav-top img.not-cross-img {
+  min-width: 80%;
+  display: inline-block;
+}
+
+.mobile-nav-top div.cross-img-div {
+  min-width: 15%;
+}
+
+div.cross-img-div img.cross-img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.mobile-nav-menu-list {
+  list-style: none;
+  font-family: 'poppinsregular', Helvetica, sans-serif;
+  text-align: center;
+  flex-direction: column;
+  align-content: center;
+  min-width: 100%;
+  padding: 0;
+  height: 80%;
+}
+
+.margin-top {
+  margin-top: 4%;
+}
+
+.fixed {
+  position: sticky;
+  top: 0;
+  background: transparent;
+  width: 100%;
+}
+
+.mobile-nav-menu-list a {
+  text-decoration: none;
+  color: black;
+}
+
+.mobile-nav-list {
+  width: 100%;
+}
+
+li.mobile-nav-list-title {
+  text-decoration: none;
+}
+
+.margin-left {
+  margin-left: 2%;
+}
+
+.code-buttons a {
+  line-height: 80%;
+  font-weight: 300;
+  min-width: 20%;
+  min-height: 40%;
+  background-color: #98dede;
+  text-align: center;
+  color: #1a2236;
+  display: block;
+  margin: 5%;
+  text-decoration: none;
+  border: 1px solid grey;
+}
+
+.mobile-nav-menu-list a:hover {
+  border-bottom: 1px solid black;
+}
+
+.cross-img-div {
+  height: 10%;
+  margin-top: 7%;
+  margin-right: 5%;
+  margin-left: 10%;
+}
+
+.header-img:hover {
+  outline: 2px solid black;
+}
+
+.header-img:active {
+  outline: 4px solid black;
+}
+
+.mobile-nav-top {
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 100%;
 }
 
 .blockImage {
@@ -165,7 +289,6 @@ p {
 }
 
 .container {
-  max-width: 600px;
   height: 100vh;
   margin: 5vh auto;
   border: none;
@@ -199,18 +322,10 @@ p {
   height: 40%;
 }
 
-.arrow-click img.display-hover {
-  display: none;
-}
-
-.download-cv-button img.display-hover {
-  display: none;
-}
-
-.arrow-click:hover img.display-hover {
-  display: inline;
-}
-
+.arrow-click img.display-hover,
+.download-cv-button:hover img.display-first,
+.download-cv-button img.display-hover,
+.arrow-click:hover img.display-hover,
 .arrow-click:hover img.display-first {
   display: none;
 }
@@ -270,10 +385,6 @@ p {
 
 .download-cv-button:hover img.display-hover {
   display: inline;
-}
-
-.download-cv-button:hover img.display-first {
-  display: none;
 }
 
 .download-cv-button:disabled {
@@ -463,20 +574,6 @@ p {
   display: inline-block;
 }
 
-.code-buttons a {
-  line-height: 80%;
-  font-weight: 300;
-  min-width: 20%;
-  min-height: 40%;
-  background-color: #98dede;
-  text-align: center;
-  color: #1a2236;
-  display: block;
-  margin: 5%;
-  text-decoration: none;
-  border: 1px solid grey;
-}
-
 .contact-form-image {
   margin-top: 4%;
 }
@@ -532,6 +629,12 @@ textarea:hover {
 }
 
 @media only screen and (min-width: 992px) {
+  .mobile-nav {
+    visibility: hidden;
+    display: none;
+    overflow: hidden;
+  }
+
   .header img,
   .header-img,
   .project-row-card img.blockImage {
@@ -739,6 +842,7 @@ textarea:hover {
     margin: 0;
     flex-direction: column;
     justify-content: space-between;
+    overflow-y: hidden;
   }
 
   .project-forms-header {
