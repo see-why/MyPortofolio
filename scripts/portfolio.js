@@ -2,10 +2,10 @@ const listItem = document.getElementById('Hamburger');
 
 function clickHamburger() {
   const menu = document.getElementById('mobile-nav');
-  if (menu.style.display === 'block') {
+  if (menu.style.display === 'flex') {
     menu.style.display = 'none';
   } else {
-    menu.style.display = 'block';
+    menu.style.display = 'flex';
   }
 }
 
