@@ -140,7 +140,7 @@ p {
 .mobile-nav {
   z-index: 9;
   max-width: 80%;
-  height: 75%;  
+  height: 75%;
   position: fixed;
   flex-wrap: wrap;
   background: #ffff;
@@ -156,7 +156,7 @@ p {
 .mobile-nav-menu-list {
   list-style: none;
   font-family: 'poppinsregular', Helvetica, sans-serif;
-  text-align: center;  
+  text-align: center;
   flex-direction: column;
   align-content: center;
   width: 100%;
@@ -169,10 +169,10 @@ p {
   margin-top: 4%;
 }
 
-.fixed {  
+.fixed {
   position: sticky;
   top: 0;
-  background: white;  
+  background: white;
   width: 100%;
 }
 
@@ -183,6 +183,20 @@ p {
 
 li.mobile-nav-list-title {
   text-decoration: none;
+}
+
+.code-buttons a {
+  line-height: 80%;
+  font-weight: 300;
+  min-width: 20%;
+  min-height: 40%;
+  background-color: #98dede;
+  text-align: center;
+  color: #1a2236;
+  display: block;
+  margin: 5%;
+  text-decoration: none;
+  border: 1px solid grey;
 }
 
 .mobile-nav-menu-list a:hover {
@@ -525,20 +539,6 @@ li.mobile-nav-list-title {
   background-color: #98dede;
   color: #1a2236;
   display: inline-block;
-}
-
-.code-buttons a {
-  line-height: 80%;
-  font-weight: 300;
-  min-width: 20%;
-  min-height: 40%;
-  background-color: #98dede;
-  text-align: center;
-  color: #1a2236;
-  display: block;
-  margin: 5%;
-  text-decoration: none;
-  border: 1px solid grey;
 }
 
 .contact-form-image {
