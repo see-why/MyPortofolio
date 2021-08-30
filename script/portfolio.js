@@ -6,7 +6,7 @@ function clickHamburger() {
     menu.style.display = "none";
   }
   else{
-    menu.style.display = "block";h
+    menu.style.display = "block";
   }  
 }
 
