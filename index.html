@@ -6,6 +6,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/stylesheet.css" />
+<script src="scripts/portfolio_load.js"></script>
+
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4WPJJL32RL"></script>
@@ -18,7 +20,7 @@
 </script>
 
 </head>
-<body>
+<body onload="loadProjects()">
 
 <div class="container d-flex">
 
@@ -98,169 +100,45 @@
     <div class="landing-form-image">
       <img src="Images/image_dots.png" class="blockImage" alt="">
     </div>
-    <div class="project-row-card">
-      <figure> 
-        <img src="Images/project-image-1.jpg" class="blockImage" alt="">
-      </figure>
-      <div class="grid-container">
-        <h3>Project name goes here</h3>
-        <div class="code-buttons d-flex">
-          <ul class="d-flex">
-            <li  class="d-flex">HTML/CSS</li>
-            <li  class="d-flex">Ruby on Rails</li>
-            <li  class="d-flex">Javascript</li>
-          </ul>   
-        </div>
-        <button class="arrow-click d-flex" type="button">See this project <img class="display-first" src="svg/ic_arrowright.svg" alt=""> <img class="display-hover" src="svg/ic_arrow_right_darktheme.svg" alt=""></button>
-      </div>
+    <div class="project-row-card" id="desktop-project-1">
+      
     </div>
   </div>
 
   <div class="desktop-version-project-2-card">   
-    <div class="float-div hide">
-      <figure class="wrapper"> 
-        <img src="Images/project-image-2.jpg" class="blockImage" alt="">
-      </figure>
-      <div class="grid-container aside">
-        <h3>Project name goes...</h3>
-        <div class="code-buttons">
-          <ul class="d-flex">
-            <li class="d-flex">HTML/CSS</li>
-            <li class="d-flex">Ruby on Rails</li>
-            <li class="d-flex">+1</li>
-          </ul>         
-        </div>
-        <button class="arrow-click d-flex" type="button">See this project <img class="display-first" src="svg/ic_arrowright.svg" alt=""> <img class="display-hover" src="svg/ic_arrow_right_darktheme.svg" alt=""></button>
-      </div>
-      <figure class="grid-container-bottom">
-        <img src="#" alt="">
-      </figure>
+    <div class="float-div hide" id="desktop-project-2">
+     
     </div> 
   </div>
 
   <div class="mobile-version-project-cards">
-    <div> 
-      <header>
-        <h2 class="h1-style margin-left">Projects</h2>   
-      </header>   
-      <figure class="wrapper"> 
-        <img src="Images/project-image-1.jpg" class="blockImage" alt="">
-      </figure>
-      <div class="grid-container aside">
-        <h3>Project name goes here</h3>
-        <div class="code-buttons">
-          <ul class="d-flex">
-            <li class="d-flex">HTML/CSS</li>
-            <li class="d-flex">Ruby on Rails</li>
-            <li class="d-flex">Javascript</li>
-          </ul>
-        </div>
-        <button class="arrow-click d-flex" type="button">See this project <img class="display-first" src="svg/ic_arrowright.svg" alt=""> <img class="display-hover" src="svg/ic_arrow_right_darktheme.svg" alt=""></button>
-      </div>    
+    <header>
+      <h2 class="h1-style margin-left">Projects</h2>   
+    </header> 
+    <div id="mobile-project-1">        
+        
     </div>
 
-    <div>    
-      <figure class="wrapper"> 
-        <img src="Images/project-image-2.jpg" class="blockImage" alt="">
-      </figure>
-      <div class="grid-container aside">
-        <h3>Project name goes here</h3>
-        <div class="code-buttons">
-          <ul class="d-flex">
-            <li class="d-flex">HTML/CSS</li>
-            <li class="d-flex">Ruby on Rails</li>
-            <li class="d-flex">Javascript</li>
-          </ul>
-        </div>
-        <button class="arrow-click d-flex" type="button">See this project <img class="display-first" src="svg/ic_arrowright.svg" alt=""> <img class="display-hover" src="svg/ic_arrow_right_darktheme.svg" alt=""></button>
-      </div>    
-    </div>
-    
-    <div>    
-      <figure class="wrapper"> 
-        <img src="Images/project-image-2.jpg" class="blockImage" alt="">
-      </figure>
-      <div class="grid-container aside">
-        <h3>Project name goes here</h3>
-        <div class="code-buttons">
-          <ul class="d-flex">
-            <li class="d-flex">HTML/CSS</li>
-            <li class="d-flex">Ruby on Rails</li>
-            <li class="d-flex">Javascript</li>
-          </ul>
-        </div>
-        <button class="arrow-click d-flex" type="button">See this project <img class="display-first" src="svg/ic_arrowright.svg" alt=""> <img class="display-hover" src="svg/ic_arrow_right_darktheme.svg" alt=""></button>
-      </div>    
+    <div id="mobile-project-2">    
+       
+    </div>  
+
+    <div id="mobile-project-3">
+      
     </div>
   
-    <div >
-      <figure class="wrapper"> 
-        <img src="Images/project-image-3.jpg" class="blockImage" alt="">
-      </figure>
-      <div class="grid-container">
-        <h3>Project name goes here</h3>
-        <div class="code-buttons">
-          <ul class="d-flex">
-            <li class="d-flex">HTML/CSS</li>
-            <li class="d-flex">Ruby on Rails</li>
-            <li class="d-flex">Javascript</li>
-          </ul>  
-        </div>
-        <button class="arrow-click d-flex" type="button">See this project <img class="display-first" src="svg/ic_arrowright.svg" alt=""> <img class="display-hover" src="svg/ic_arrow_right_darktheme.svg" alt=""></button>
-      </div>
+    <div id="mobile-project-4">
+     
     </div>
   
-    <div >
-      <figure class="wrapper"> 
-        <img src="Images/project-image-4.jpg" class="blockImage" alt="">
-      </figure>
-      <div class="grid-container">
-        <h3>Project name goes here</h3>
-        <div class="code-buttons">
-          <ul class="d-flex">
-            <li class="d-flex">HTML/CSS</li>
-            <li class="d-flex">Ruby on Rails</li>
-            <li class="d-flex">Javascript</li>
-          </ul>  
-        </div>
-        <button class="arrow-click d-flex" type="button">See this project <img class="display-first" src="svg/ic_arrowright.svg" alt=""> <img class="display-hover" src="svg/ic_arrow_right_darktheme.svg" alt=""></button>
-      </div>
+    <div id="mobile-project-5">
+     
     </div>
   
-    <div >
-      <figure class="wrapper"> 
-        <img src="Images/project-image-5.jpg" class="blockImage" alt="">
-      </figure>
-      <div class="grid-container">
-        <h3>Project name goes here</h3>
-        <div class="code-buttons">
-          <ul class="d-flex">
-            <li class="d-flex">HTML/CSS</li>
-            <li class="d-flex">Ruby on Rails</li>
-            <li class="d-flex">Javascript</li>
-          </ul>  
-        </div>
-        <button class="arrow-click d-flex" type="button">See this project <img class="display-first" src="svg/ic_arrowright.svg" alt=""> <img class="display-hover" src="svg/ic_arrow_right_darktheme.svg" alt=""></button>
-      </div>
+    <div id="mobile-project-6">
+     
+  
     </div>
-  
-    <div>
-      <figure class="wrapper"> 
-        <img src="Images/project-image-6.jpg" class="blockImage" alt="">
-      </figure>
-      <div class="grid-container">
-        <h3>Project name goes here</h3>
-        <div class="code-buttons">
-          <ul class="d-flex">
-            <li class="d-flex">HTML/CSS</li>
-            <li class="d-flex">Ruby on Rails</li>
-            <li class="d-flex">Javascript</li>
-          </ul>  
-        </div>
-        <button class="arrow-click d-flex" type="button">See this project <img class="display-first" src="svg/ic_arrowright.svg" alt=""> <img class="display-hover" src="svg/ic_arrow_right_darktheme.svg" alt=""></button>
-      </div>
-  
-  </div>
  
  
   </div>
