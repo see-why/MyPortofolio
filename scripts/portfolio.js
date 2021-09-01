@@ -21,5 +21,12 @@ function clickCancel() {
 cancelImage.addEventListener('click', clickCancel);
 
 const listItems = document.querySelectorAll('ul.mobile-nav-menu-list > li');
-
 listItems.forEach((x) => x.addEventListener('click', clickCancel));
+
+function closePopUp() {
+  const popup = document.getElementById('mobile-pop-up');
+  popup.style.display = 'none';
+}
+
+const closeImage = document.getElementById('cancel-img-popup');
+closeImage.addEventListener('click', closePopUp);
