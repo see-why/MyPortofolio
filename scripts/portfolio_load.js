@@ -13,6 +13,7 @@ const projectCards = [
       alt: '',
     },
     button: {
+      id: 'desktop-button-project-1',
       text: 'See this project',
       image: {
         url: 'svg/ic_arrowright.svg',
@@ -37,6 +38,7 @@ const projectCards = [
       alt: '',
     },
     button: {
+      id: 'desktop-button-project-2',
       text: 'See this project',
       image: {
         url: 'svg/ic_arrowright.svg',
@@ -61,6 +63,7 @@ const projectCards = [
       alt: '',
     },
     button: {
+      id: 'mobile-button-project-1',
       text: 'See this project',
       image: {
         url: 'svg/ic_arrowright.svg',
@@ -85,6 +88,7 @@ const projectCards = [
       alt: '',
     },
     button: {
+      id: 'mobile-button-project-2',
       text: 'See this project',
       image: {
         url: 'svg/ic_arrowright.svg',
@@ -109,6 +113,7 @@ const projectCards = [
       alt: '',
     },
     button: {
+      id: 'mobile-button-project-3',
       text: 'See this project',
       image: {
         url: 'svg/ic_arrowright.svg',
@@ -133,6 +138,7 @@ const projectCards = [
       alt: '',
     },
     button: {
+      id: 'mobile-button-project-4',
       text: 'See this project',
       image: {
         url: 'svg/ic_arrowright.svg',
@@ -157,6 +163,7 @@ const projectCards = [
       alt: '',
     },
     button: {
+      id: 'mobile-button-project-5',
       text: 'See this project',
       image: {
         url: 'svg/ic_arrowright.svg',
@@ -181,6 +188,7 @@ const projectCards = [
       alt: '',
     },
     button: {
+      id: 'mobile-button-project-6',
       text: 'See this project',
       image: {
         url: 'svg/ic_arrowright.svg',
@@ -192,6 +200,15 @@ const projectCards = [
     linktosource: 'https://github.com/see-why/MyPortofolio',
   },
 ];
+
+function showPopUp() {
+  const popup = document.getElementById('mobile-pop-up');
+  if (popup.style.display === 'flex') {
+    popup.style.display = 'none';
+  } else {
+    popup.style.display = 'flex';
+  }
+}
 
 function loadProjects() {
   projectCards.forEach((each) => {
@@ -246,6 +263,8 @@ function loadProjects() {
     const button = document.createElement('button');
     button.innerText = each.button.text;
     button.className = 'arrow-click d-flex';
+    button.id = each.button.id;
+    button.addEventListener('click', showPopUp);
 
     const buttonImage = document.createElement('img');
     buttonImage.className = 'display-first';
@@ -273,5 +292,4 @@ function loadProjects() {
   });
 }
 
-const section = document.getElementById('');
-section.addEventListener('click', loadProjects);
+export { projectCards, loadProjects };
