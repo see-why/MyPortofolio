@@ -171,17 +171,24 @@ p {
 .mobile-nav,
 .mobile-pop-up {
   z-index: 9;
-  min-width: 100%;
-  min-height: 100%;
-  position: absolute;
+  width: 100%;
+  height: 100%;
   flex-wrap: wrap;
+  position: fixed;
   overflow-x: hidden;
-  overflow-y: scroll;
   background: #ffff;
-  top: 5%;
+  left: 0;
   flex-direction: column;
   justify-content: space-between;
   margin: auto;
+}
+
+.mobile-pop-up {
+  overflow-y: auto;
+}
+
+.mobile-nav {
+  overflow-y: hidden;
 }
 
 .popup-cross-img {
@@ -230,7 +237,6 @@ p {
 }
 
 .mobile-popup-slide-container {
-  height: 40%;
   min-width: 100%;
   margin-bottom: 2%;
 }
@@ -420,13 +426,11 @@ li.mobile-nav-list-title {
 
 .container {
   width: 100%;
-  height: 100vh;
-  margin: 5vh auto;
+  height: 100%;
   border: none;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
   flex-direction: column;
   justify-content: space-between;
-  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -801,10 +805,30 @@ textarea:hover {
     display: flex;
   }
 
+  .mobile-nav,
+  .mobile-pop-up {
+    z-index: 9;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background: #ffff;
+    top: 5%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+  }
+
   .mobile-pop-up {
     background: linear-gradient(0deg, rgba(26, 34, 54, 0.95), rgba(26, 34, 54, 0.95));
     backdrop-filter: blur(24px);
     top: 0;
+  }
+
+  .mobile-popup-slide-container {
+    min-height: 45%;
   }
 
   .mobile-pop-up div.holder {
@@ -1043,6 +1067,7 @@ textarea:hover {
   .container {
     border: none;
     max-width: none;
+    height: 100vh;
     margin: 0;
     flex-direction: column;
     justify-content: space-between;
