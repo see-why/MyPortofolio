@@ -109,6 +109,27 @@ ul.navbar {
   list-style: none;
 }
 
+.code-buttons li.d-flex,
+.mobile-popup-div li {
+  min-width: 20%;
+  min-height: 60%;
+  line-height: 70%;
+  font-weight: 300;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  margin-right: 3%;
+  padding: 2%;
+  color: #1a2236;
+}
+
+.mobile-popup-div li {
+  border: 1px solid #1a2236;
+  background-color: #ffff;
+  font-family: 'poppinsregular', Helvetica, sans-serif;
+  text-align: center;
+}
+
 .hide,
 .mobile-pop-up,
 .textarea,
@@ -163,7 +184,7 @@ p {
   margin: auto;
 }
 
-.popup-cross-img {  
+.popup-cross-img {
   margin-right: 2%;
   margin-top: 2%;
 }
@@ -198,20 +219,31 @@ p {
 .mobile-popup-button {
   text-decoration: none;
   font-family: 'poppinsregular', Helvetica, sans-serif;
-  font-weight: bold;  
+  font-weight: bold;
   height: 35%;
   padding-top: 2%;
 }
 
 .mobile-popup-button img.display-first {
   height: 100%;
-  width: 35%;  
+  width: 35%;
 }
 
 .mobile-popup-slide-container {
   height: 40%;
   min-width: 100%;
   margin-bottom: 2%;
+}
+
+.arrow-click img.display-hover,
+.download-cv-button img.display-hover,
+.arrow-click:hover img.display-hover,
+.arrow-click:hover img.display-first {
+  display: none;
+}
+
+.download-cv-button:hover img.display-first {
+  content: url(../svg/ic_download_darktheme.svg);
 }
 
 .mobile-popup-button:hover {
@@ -247,9 +279,9 @@ p {
   font-family: 'poppinsregular', Helvetica, sans-serif;
   font-size: 30px;
   font-weight: bold;
-  color: #1a2236; 
+  color: #1a2236;
   text-align: inherit;
-  width: 100%;  
+  width: 100%;
 }
 
 .mobile-nav-bottom {
@@ -421,13 +453,6 @@ li.mobile-nav-list-title {
   height: 40%;
 }
 
-.arrow-click img.display-hover,
-.download-cv-button img.display-hover,
-.arrow-click:hover img.display-hover,
-.arrow-click:hover img.display-first {
-  display: none;
-}
-
 .cards img {
   height: 8em;
   width: 35%;
@@ -479,10 +504,6 @@ li.mobile-nav-list-title {
   justify-content: center;
   flex-direction: row;
   border: none;
-}
-
-.download-cv-button:hover img.display-first {
-  content: url(../svg/ic_download_darktheme.svg);
 }
 
 .download-cv-button:disabled {
@@ -680,30 +701,9 @@ li.mobile-nav-list-title {
   width: 100%;
 }
 
-.code-buttons li.d-flex,
-.mobile-popup-div li {
-  min-width: 20%;
-  min-height: 60%;
-  line-height: 70%;
-  font-weight: 300;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  margin-right: 3%;
-  padding: 2%;  
-  color: #1a2236;
-}
-
 .code-buttons li.d-flex {
   border: 1px solid grey;
   background-color: #98dede;
-}
-
-.mobile-popup-div li {
-  border: 1px solid #1a2236;
-  background-color: #ffff;
-  font-family: 'poppinsregular', Helvetica, sans-serif;
-  text-align: center;
 }
 
 .code-buttons button {
@@ -825,7 +825,7 @@ textarea:hover {
   }
 
   .mobile-pop-up-h2 {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   .mobile-popup-div li {
@@ -858,7 +858,7 @@ textarea:hover {
     margin-bottom: 10%;
   }
 
-  .mobile-pop-up a {    
+  .mobile-pop-up a {
     min-width: 40%;
     margin-right: 4%;
   }
@@ -1159,6 +1159,10 @@ textarea:hover {
     height: 25%;
   }
 
+  .grid-container button.arrow-click {
+    font-size: 16px;
+  }
+
   .project-row-card button.arrow-click,
   .aside button.arrow-click {
     max-height: 60%;
@@ -1205,10 +1209,6 @@ textarea:hover {
     background-image: url(../Images/project-image-6.jpg);
     background-size: cover;
     height: 25%;
-  }
-
-  .grid-container button.arrow-click { 
-    font-size: 16px;
   }
 
   .float-div .grid-container {
