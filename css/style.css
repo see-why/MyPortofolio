@@ -109,6 +109,21 @@ ul.navbar {
   list-style: none;
 }
 
+.container header.fixed {
+  justify-content: flex-end;
+}
+
+.body-img-div {
+  position: absolute;
+  height: 10%;
+  max-width: 30%;
+}
+
+.body-img-div img {
+  height: 100%;
+  width: 100%;
+}
+
 .code-buttons li.d-flex,
 .mobile-popup-div li {
   min-width: 20%;
@@ -783,6 +798,7 @@ textarea:hover {
 
   .header img,
   .header-img,
+  .body-img-div,
   .project-row-card img.blockImage {
     display: none;
   }
