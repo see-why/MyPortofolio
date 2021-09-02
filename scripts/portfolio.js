@@ -29,4 +29,33 @@ function closePopUp() {
 }
 
 const closeImage = document.getElementById('cancel-img-popup');
-closeImage.addEventListener('click', closePopUp);
+
+if (closeImage !== null) {
+  closeImage.addEventListener('click', closePopUp);
+}
+
+const button = document.getElementById('submit-form-button');
+button.addEventListener('click', () => {
+  const errortag = document.getElementById('error-tag');
+  errortag.classList.toggle('display');
+});
+
+const form = document.getElementById('get-started-contact-form');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const email = form.elements.user_email;
+
+  const errortag = document.getElementById('error-tag');
+
+  if (errortag.className !== 'form-error display') {
+    errortag.classList.add('display');
+  }
+
+  if (email.value.toLowerCase() !== email.value) {
+    errortag.innerHTML = 'email must be in small letters';
+  } else {
+    errortag.classList.remove('display');
+    form.submit();
+  }
+});

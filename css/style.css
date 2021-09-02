@@ -12,7 +12,7 @@ html {
 }
 
 *:focus-visible {
-  outline: darkred solid 5px;
+  outline: black solid 2px;
 }
 
 body {
@@ -23,6 +23,11 @@ body {
 
 textarea {
   color: #1a2236;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
 }
 
 textarea::placeholder {
@@ -107,6 +112,40 @@ button {
 
 ul.navbar {
   list-style: none;
+}
+
+.form-error {
+  margin-top: 1%;
+  font-family: 'poppinsregular', Helvetica, sans-serif;
+  font-size: 10px;
+  text-align: center;
+  color: red;
+  visibility: hidden;
+}
+
+.display {
+  visibility: visible;
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.container header.fixed {
+  justify-content: flex-end;
+}
+
+.body-img-div {
+  position: absolute;
+  height: 10%;
+  max-width: 30%;
+}
+
+.body-img-div img {
+  height: 100%;
+  width: 100%;
 }
 
 .code-buttons li.d-flex,
@@ -783,6 +822,7 @@ textarea:hover {
 
   .header img,
   .header-img,
+  .body-img-div,
   .project-row-card img.blockImage {
     display: none;
   }

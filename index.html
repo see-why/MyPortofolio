@@ -23,9 +23,8 @@
 <body onload="loadProjects()">
 
 <div class="container d-flex">
-
-<header class="header fixed d-flex">
-  <img src="Images/geometry.png" alt="">
+<div class="body-img-div"><img src="Images/geometry.png" alt=""></div>
+<header class="header fixed d-flex">  
   <nav class="icon">
     <ul class="navbar">
       <li class="header-img" id="Hamburger"><img src="Images/ic_menu.png" tabindex="0"  alt="view menu"></li>    
@@ -201,7 +200,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna.
       </p> 
-      <form action="https://formspree.io/f/xwkawbvd" method="POST">
+      <form id="get-started-contact-form" action="https://formspree.io/f/xwkawbvd" method="POST">
         <fieldset class="contact-form-fieldset d-flex">
           <div class="form-fieldset-labels">
             <label class="fieldset-label d-flex" for="user_name">
@@ -215,7 +214,8 @@
           </div>    
           <label class="fieldset-label textarea d-flex" for="user_message">Message</label>   
           <textarea class="textarea-text" required id="user_message" name="user_message" maxlength="500" placeholder="Enter your message here..."></textarea>
-          <button class="collaboration-button" type="submit"><span class="collaboration-button-span">Start collaboration</span></button>
+          <small id="error-tag" class="form-error"></small>
+          <button id="submit-form-button" class="collaboration-button" type="submit"><span class="collaboration-button-span">Start collaboration</span></button>
         </fieldset>
       </form> 
     </div>
