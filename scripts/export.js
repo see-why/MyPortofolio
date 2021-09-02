@@ -442,3 +442,13 @@ const section = document.getElementById('');
 if (section !== null) {
   section.addEventListener('click', loadProjects);
 }
+
+if (localStorage.getItem('formData') === null) {
+  const formData = {
+    name: '',
+    email: '',
+    message: '',
+  };
+  const formDatestring = JSON.stringify(formData);
+  localStorage.setItem('formData', formDatestring);
+}
