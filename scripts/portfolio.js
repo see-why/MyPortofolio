@@ -34,10 +34,49 @@ if (closeImage !== null) {
   closeImage.addEventListener('click', closePopUp);
 }
 
+function setFormData(name, email, message) {
+  const formData = {};
+  formData.name = name;
+  formData.email = email;
+  formData.message = message;
+
+  const formDatestring = JSON.stringify(formData);
+
+  localStorage.setItem('formData', formDatestring);
+}
+
+function setFormDataForInput() {
+  const inputName = document.getElementById('user_name');
+  const inputEmail = document.getElementById('user_email');
+  const inputMessage = document.getElementById('user_message');
+
+  const name = inputName.value;
+  const email = inputEmail.value;
+  const message = inputMessage.value;
+
+  setFormData(name, email, message);
+}
+
+const inputName = document.getElementById('user_name');
+const inputEmail = document.getElementById('user_email');
+const inputMessage = document.getElementById('user_message');
+
+inputName.addEventListener('change', setFormDataForInput);
+inputEmail.addEventListener('change', setFormDataForInput);
+inputMessage.addEventListener('change', setFormDataForInput);
+
 const button = document.getElementById('submit-form-button');
 button.addEventListener('click', () => {
   const errortag = document.getElementById('error-tag');
   errortag.classList.toggle('display');
+
+  const form = document.getElementById('get-started-contact-form');
+
+  const name = form.elements.user_name.value;
+  const email = form.elements.user_email.value;
+  const message = form.elements.user_message.value;
+
+  setFormData(name, email, message);
 });
 
 const form = document.getElementById('get-started-contact-form');
@@ -59,3 +98,11 @@ form.addEventListener('submit', (event) => {
     form.submit();
   }
 });
+
+const formDataString = localStorage.getItem('formData');
+if (formDataString !== null) {
+  const formData = JSON.parse(formDataString);
+  form.elements.user_name.value = formData.name;
+  form.elements.user_email.value = formData.email;
+  form.elements.user_message.value = formData.message;
+}
