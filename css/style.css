@@ -45,6 +45,11 @@ textarea::placeholder {
   padding: 2% 2%;
 }
 
+li.header-img {
+  background: #ffff;
+  border: 1px solid darkgrey;
+}
+
 .d-flex {
   display: flex;
 }
@@ -139,8 +144,9 @@ ul.navbar {
 
 .body-img-div {
   position: absolute;
-  height: 10%;
+  max-height: 10%;
   max-width: 30%;
+  z-index: 9;
 }
 
 .body-img-div img {
@@ -186,7 +192,7 @@ p {
   font-weight: normal;
   line-height: 21px;
   letter-spacing: -0.01em;
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-name: slide-in;
 }
 
@@ -372,6 +378,7 @@ div.cross-img-div img.cross-img {
   top: 0;
   background: transparent;
   width: 100%;
+  z-index: 100;
 }
 
 .mobile-nav-menu-list a {
@@ -823,6 +830,7 @@ textarea:hover {
   .header img,
   .header-img,
   .body-img-div,
+  .li.header-img,
   .project-row-card img.blockImage {
     display: none;
   }
@@ -859,6 +867,10 @@ textarea:hover {
     flex-direction: column;
     justify-content: space-between;
     margin: auto;
+  }
+
+  .fixed {
+    z-index: 100;
   }
 
   .mobile-pop-up {
@@ -952,7 +964,7 @@ textarea:hover {
     align-content: space-around;
     justify-content: center;
     width: 100%;
-    background-color: transparent;
+    background-color: white;
     box-shadow: 0 0.5px 0 #dddfe6;
   }
 
