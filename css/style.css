@@ -45,11 +45,6 @@ textarea::placeholder {
   padding: 2% 2%;
 }
 
-li.header-img {
-  background: #ffff;
-  border: 1px solid darkgrey;
-}
-
 .d-flex {
   display: flex;
 }
@@ -792,6 +787,11 @@ li.mobile-nav-list-title {
   border: 1px solid #dfdfe0;
   border-radius: 4px;
   padding: 2% 2%;
+}
+
+li.header-img img {
+  border: 1px solid white;
+  background: white;
 }
 
 label.fieldset-label:hover,
