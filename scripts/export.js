@@ -1,10 +1,10 @@
 const projectCards = [
   {
     id: 'desktop-project-1',
-    name: 'Project name goes here',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi <br><br> Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
+    name: 'Comic Con',
+    description: 'A website with About and Home pages, detailing information about a meet-up for comic lovers.',
     image_top: {
-      url: 'Images/project-image-1.jpg',
+      url: 'Images/comicCon.PNG',
       alt: '',
     },
     technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
@@ -22,15 +22,15 @@ const projectCards = [
     },
     hasImageBottom: false,
     IsDesktop: true,
-    linktolive: 'https://see-why.github.io/MyPortofolio/',
-    linktosource: 'https://github.com/see-why/MyPortofolio',
+    linktolive: 'https://see-why.github.io/ComicCon/',
+    linktosource: 'https://github.com/see-why/ComicCon',
   },
   {
     id: 'desktop-project-2',
-    name: 'Project name goes...',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi <br><br> Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
+    name: 'To-do List',
+    description: 'A simple HTML list of To Do tasks, styled with Css and added dynamically using Javascript. Webpack is used in bundling the respective components.',
     image_top: {
-      url: 'Images/project-image-2.jpg',
+      url: 'Images/todoList.PNG',
       alt: '',
     },
     technologies: ['HTML/CSS', 'Ruby on Rails', '+1'],
@@ -48,15 +48,15 @@ const projectCards = [
     },
     hasImageBottom: true,
     IsDesktop: true,
-    linktolive: 'https://see-why.github.io/MyPortofolio/',
-    linktosource: 'https://github.com/see-why/MyPortofolio',
+    linktolive: 'https://see-why.github.io/To-do_List/dist/',
+    linktosource: 'https://github.com/see-why/To-do_List',
   },
   {
     id: 'mobile-project-1',
-    name: 'Project name goes here',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi <br><br> Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
+    name: 'Comic Con',
+    description: 'A website with About and Home pages, detailing information about a meet-up for comic lovers.',
     image_top: {
-      url: 'Images/project-image-1.jpg',
+      url: 'Images/comicCon.PNG',
       alt: '',
     },
     technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
@@ -74,15 +74,15 @@ const projectCards = [
     },
     hasImageBottom: false,
     IsDesktop: false,
-    linktolive: 'https://see-why.github.io/MyPortofolio/',
-    linktosource: 'https://github.com/see-why/MyPortofolio',
+    linktolive: 'https://see-why.github.io/ComicCon/',
+    linktosource: 'https://github.com/see-why/ComicCon',
   },
   {
     id: 'mobile-project-2',
-    name: 'Project name goes here',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi <br><br> Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
+    name: 'To-do List',
+    description: 'A simple HTML list of To Do tasks, styled with Css and added dynamically using Javascript. Webpack is used in bundling the respective components.',
     image_top: {
-      url: 'Images/project-image-2.jpg',
+      url: 'Images/todoList.PNG',
       alt: '',
     },
     technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
@@ -100,15 +100,15 @@ const projectCards = [
     },
     hasImageBottom: false,
     IsDesktop: false,
-    linktolive: 'https://see-why.github.io/MyPortofolio/',
-    linktosource: 'https://github.com/see-why/MyPortofolio',
+    linktolive: 'https://see-why.github.io/To-do_List/dist/',
+    linktosource: 'https://github.com/see-why/To-do_List',
   },
   {
     id: 'mobile-project-3',
-    name: 'Project name goes here',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi <br><br> Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
+    name: 'Awesome Books',
+    description: 'A single page app with 3 pages, View all books, add books and the contact page, you can add or delete books.',
     image_top: {
-      url: 'Images/project-image-3.jpg',
+      url: 'Images/awesomeBooks.PNG',
       alt: '',
     },
     technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
@@ -126,8 +126,8 @@ const projectCards = [
     },
     hasImageBottom: false,
     IsDesktop: false,
-    linktolive: 'https://see-why.github.io/MyPortofolio/',
-    linktosource: 'https://github.com/see-why/MyPortofolio',
+    linktolive: 'https://kdlamini.github.io/awesome-books-javascript/',
+    linktosource: 'https://github.com/KDlamini/awesome-books-javascript',
   },
   {
     id: 'mobile-project-4',
@@ -280,7 +280,7 @@ function showPopUp() {
   slideDiv.className = 'mobile-popup-slide';
 
   const slideDivImage = document.createElement('img');
-  slideDivImage.src = 'svg/image-slide-complete.svg';
+  slideDivImage.src = project.image_top.url;
   slideDivImage.alt = '';
   slideDivImage.className = 'slide';
 
