@@ -131,13 +131,13 @@ const projectCards = [
   },
   {
     id: 'mobile-project-4',
-    name: 'Project name goes here',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi <br><br> Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
+    name: 'Final-Space',
+    description: 'A mobile Web Application Hub for getting cool details on characters from the Adult swim show Final space.',
     image_top: {
-      url: 'Images/project-image-4.jpg',
+      url: 'Images/finalspace.PNG',
       alt: '',
     },
-    technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
+    technologies: ['Ruby'],
     image_bottom: {
       url: '#',
       alt: '',
@@ -152,8 +152,8 @@ const projectCards = [
     },
     hasImageBottom: false,
     IsDesktop: false,
-    linktolive: 'https://see-why.github.io/MyPortofolio/',
-    linktosource: 'https://github.com/see-why/MyPortofolio',
+    linktolive: 'https://finalspacehub.netlify.app/',
+    linktosource: 'https://github.com/see-why/Final-Space-React-Redux',
   },
   {
     id: 'mobile-project-5',
