@@ -1,13 +1,14 @@
 const projectCards = [
   {
     id: 'desktop-project-1',
+    project_id: -1,
     name: 'Comic Con',
     description: 'A website with About and Home pages, detailing information about a meet-up for comic lovers.',
     image_top: {
       url: 'Images/comicCon.PNG',
       alt: '',
     },
-    technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
+    technologies: ['HTML/CSS', 'Javascript'],
     image_bottom: {
       url: '#',
       alt: '',
@@ -27,13 +28,14 @@ const projectCards = [
   },
   {
     id: 'desktop-project-2',
+    project_id: 0,
     name: 'To-do List',
     description: 'A simple HTML list of To Do tasks, styled with Css and added dynamically using Javascript. Webpack is used in bundling the respective components.',
     image_top: {
       url: 'Images/todoList.PNG',
       alt: '',
     },
-    technologies: ['HTML/CSS', 'Ruby on Rails', '+1'],
+    technologies: ['HTML/CSS', 'JavaScript', '+1'],
     image_bottom: {
       url: '#',
       alt: '',
@@ -53,13 +55,14 @@ const projectCards = [
   },
   {
     id: 'mobile-project-1',
+    project_id: 1,
     name: 'Comic Con',
     description: 'A website with About and Home pages, detailing information about a meet-up for comic lovers.',
     image_top: {
       url: 'Images/comicCon.PNG',
       alt: '',
     },
-    technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
+    technologies: ['HTML/CSS', 'Javascript'],
     image_bottom: {
       url: '#',
       alt: '',
@@ -79,13 +82,14 @@ const projectCards = [
   },
   {
     id: 'mobile-project-2',
+    project_id: 2,
     name: 'To-do List',
     description: 'A simple HTML list of To Do tasks, styled with Css and added dynamically using Javascript. Webpack is used in bundling the respective components.',
     image_top: {
       url: 'Images/todoList.PNG',
       alt: '',
     },
-    technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
+    technologies: ['HTML/CSS', 'Javascript', 'LocalStorage'],
     image_bottom: {
       url: '#',
       alt: '',
@@ -105,13 +109,14 @@ const projectCards = [
   },
   {
     id: 'mobile-project-3',
+    project_id: 3,
     name: 'Awesome Books',
     description: 'A single page app with 3 pages, View all books, add books and the contact page, you can add or delete books.',
     image_top: {
       url: 'Images/awesomeBooks.PNG',
       alt: '',
     },
-    technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
+    technologies: ['HTML/CSS', 'Javascript', 'LocalStorage'],
     image_bottom: {
       url: '#',
       alt: '',
@@ -131,13 +136,14 @@ const projectCards = [
   },
   {
     id: 'mobile-project-4',
+    project_id: 4,
     name: 'Final-Space',
     description: 'A mobile Web Application Hub for getting cool details on characters from the Adult swim show Final space.',
     image_top: {
       url: 'Images/finalspace.PNG',
       alt: '',
     },
-    technologies: ['Ruby'],
+    technologies: ['HTML/CSS', 'Javascript', 'React-Redux'],
     image_bottom: {
       url: '#',
       alt: '',
@@ -157,6 +163,7 @@ const projectCards = [
   },
   {
     id: 'mobile-project-5',
+    project_id: 5,
     name: 'Project name goes here',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi <br><br> Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
     image_top: {
@@ -183,6 +190,7 @@ const projectCards = [
   },
   {
     id: 'mobile-project-6',
+    project_id: 6,
     name: 'Project name goes here',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi <br><br> Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
     image_top: {
@@ -209,26 +217,43 @@ const projectCards = [
   },
 ];
 
+function loadNextProjects(seed, id) {
+  let projectID = parseInt(id, 10);
+
+  if (seed === -1) {
+    projectID = projectID - 1 < 1 ? 4 : projectID - 1;
+  } else {
+    projectID = projectID + 1 > 4 ? 1 : projectID + 1;
+  }
+
+  showPopUp(projectID, id);
+}
+
 function closePopUp() {
   const popup = document.getElementById('mobile-pop-up');
   popup.style.display = 'none';
 }
 
-function showPopUp() {
+function showPopUp(seed, id) {
   const parentDivContainer = document.getElementById('mobile-pop-up');
   parentDivContainer.innerHTML = '';
 
-  if (parentDivContainer.style.display === 'flex') {
-    parentDivContainer.style.display = 'none';
-    return;
-  }
+  const buttonId = id;
 
-  const buttonId = this.id;
-  const project = projectCards.find((obj) => obj.button.id === buttonId);
+  const project = seed === 10 || null ? projectCards.find((obj) => obj.button.id === buttonId)
+    : projectCards.find((obj) => obj.project_id === seed);
 
   const parentDiv = document.createElement('div');
   parentDiv.className = 'desktop-container d-flex';
   parentDiv.id = 'mobile-container';
+
+  const aPrevTag = document.createElement('span');
+  aPrevTag.innerHTML = '<';
+  aPrevTag.id = project?.project_id;
+  aPrevTag.className = 'prev';
+  aPrevTag.addEventListener('click', () => loadNextProjects(-1, aPrevTag.id));
+
+  parentDivContainer.appendChild(aPrevTag);
 
   const header = document.createElement('header');
   header.className = 'd-flex';
@@ -246,7 +271,7 @@ function showPopUp() {
 
   const h2 = document.createElement('h2');
   h2.className = 'mobile-pop-up-h2';
-  h2.innerText = project.name;
+  h2.innerText = project?.name;
 
   headerDiv.appendChild(headerDivImage);
   header.appendChild(headerDiv);
@@ -260,9 +285,9 @@ function showPopUp() {
   const flex = 'd-flex';
 
   const listDivUl = document.createElement('ul');
-  listDivUl.className = flex;
+  listDivUl.className = `margin-top ${flex}`;
 
-  project.technologies.forEach((each) => {
+  project?.technologies.forEach((each) => {
     const li = document.createElement('li');
     li.innerText = each;
     li.className = flex;
@@ -330,7 +355,7 @@ function showPopUp() {
 
   parentDiv.appendChild(buttonDiv);
 
-  if (project.IsDesktop === true) {
+  if (project?.IsDesktop === true) {
     const imageDiv = document.createElement('div');
     imageDiv.className = 'mobile-popup-image-div d-flex';
 
@@ -350,7 +375,15 @@ function showPopUp() {
     parentDiv.appendChild(imageDiv);
   }
 
+  const aNextTag = document.createElement('span');
+  aNextTag.innerHTML = '>';
+  aNextTag.id = project.project_id;
+  aNextTag.className = 'next';
+  aNextTag.addEventListener('click', () => loadNextProjects(1, aNextTag.id));
+
   parentDivContainer.appendChild(parentDiv);
+
+  parentDivContainer.appendChild(aNextTag);
 
   parentDivContainer.style.display = 'flex';
 }
@@ -409,7 +442,7 @@ function loadProjects() {
     button.innerText = each.button.text;
     button.className = 'arrow-click d-flex';
     button.id = each.button.id;
-    button.addEventListener('click', showPopUp);
+    button.addEventListener('click', () => showPopUp(10, button.id));
 
     const buttonImage = document.createElement('img');
     buttonImage.className = 'display-first';
