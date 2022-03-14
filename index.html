@@ -4,10 +4,10 @@
 <meta charset="utf-8" />
 <title>Iyadi Cyril Osita-Home page</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<link rel="stylesheet" href="css/imageGallery.css" />
 <link rel="stylesheet" href="css/mobile.css" />
 <link rel="stylesheet" href="css/desktop.css" />
 <link rel="stylesheet" href="css/stylesheet.css" />
-<script type="module" src="scripts/portfolio_load.js"></script>
 <script src="scripts/export.js"></script>
 
 
@@ -79,7 +79,7 @@
       see and have a project you need coded, don’t hesitate and contact me.
     </p> 
   
-    <a href='#contact-form'><button class="collaboration-button" type="button" ><span class="collaboration-button-span">Start collaboration</span></button></a>
+    <button class="collaboration-button" type="button"  onclick="window.location.href='#contact-form'"><span class="collaboration-button-span">Start collaboration</span></button>
 
     <div class="landing-form-image">
       <img src="Images/image_dots.png" class="blockImage" alt="">
@@ -121,7 +121,10 @@
 
 </section>
 
-<div class="mobile-pop-up" id="mobile-pop-up"></div>
+<div class="mobile-pop-up" id="mobile-pop-up">
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
 
 <div class="about-form-and-skill-form">
   <section class="content d-flex" id="about-form">
@@ -131,8 +134,8 @@
     </header>
   
     <p>
-      I am a Full-stack web developer who specializes in using Javascript, C#, and SQL 
-      to build software for businesses. I am also enrolled in a remote software development 
+      I am a Full-stack web developer who specializes in using Ruby, Ruby on Rails, React-Redux, Javascript, C#, Postgresql and SQL 
+      to build software for businesses. I also studied in a remote software development 
       school that uses pair programming and real-world projects to teach development.
     </p> 
     
@@ -149,6 +152,7 @@
         <li>Ruby</li>
         <li>HTML</li>
         <li>CSS</li>
+        <li>C#</li>
       </ul>   
         <img src="Images/ic_asterisks.jpg" alt=""/>   
     </div>  
@@ -156,10 +160,10 @@
     <div class="cards second d-flex">
       <header><h3>Frameworks</h3></header>
       <ul>
-        <li>Bootstrap</li>
+        <li>Rspec</li>
         <li>Ruby on Rails</li>
-        <li>CapiBara</li>
-        <li>Selenium</li>
+        <li>MVC .Net</li>
+        <li>ASP .Net</li>
       </ul>   
       <img src="Images/ic_lamp.jpg" alt=""/>
       
