@@ -76,7 +76,7 @@
   .mobile-pop-up header {
     flex-direction: row-reverse;
     margin-right: 2%;
-    align-items: baseline;
+    align-items: center;
   }
 
   .mobile-pop-up-h2 {
@@ -418,6 +418,7 @@
 
   .grid-container button.arrow-click {
     font-size: 16px;
+    width: auto;
   }
 
   .project-row-card button.arrow-click,
