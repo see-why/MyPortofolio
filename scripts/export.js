@@ -226,6 +226,7 @@ function loadNextProjects(seed, id) {
     projectID = projectID + 1 > 4 ? 1 : projectID + 1;
   }
 
+  // eslint-disable-next-line no-use-before-define
   showPopUp(projectID, id);
 }
 
