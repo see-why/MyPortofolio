@@ -15,7 +15,7 @@ const projectCards = [
     },
     button: {
       id: 'desktop-button-project-1',
-      text: 'See this project',
+      text: 'See this project and more...',
       image: {
         url: 'svg/ic_arrowright.svg',
         alt: '',
@@ -42,7 +42,7 @@ const projectCards = [
     },
     button: {
       id: 'desktop-button-project-2',
-      text: 'See this project',
+      text: 'See this project and more...',
       image: {
         url: 'svg/ic_arrowright.svg',
         alt: '',
