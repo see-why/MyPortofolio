@@ -2,13 +2,13 @@ const projectCards = [
   {
     id: 'desktop-project-1',
     project_id: -1,
-    name: 'Comic Con',
-    description: 'A website with About and Home pages, detailing information about a meet-up for comic lovers.',
+    name: 'Rails Ledger',
+    description: 'A mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.',
     image_top: {
-      url: 'Images/comicCon.PNG',
+      url: 'Images/RailsLedger.PNG',
       alt: '',
     },
-    technologies: ['HTML/CSS', 'Javascript'],
+    technologies: ['HTML/CSS', 'Javascript', 'Ruby on Rails'],
     image_bottom: {
       url: '#',
       alt: '',
@@ -23,19 +23,19 @@ const projectCards = [
     },
     hasImageBottom: false,
     IsDesktop: true,
-    linktolive: 'https://see-why.github.io/ComicCon/',
-    linktosource: 'https://github.com/see-why/ComicCon',
+    linktolive: 'https://shielded-wave-68335.herokuapp.com/',
+    linktosource: 'https://github.com/see-why/RailsLedger',
   },
   {
     id: 'desktop-project-2',
     project_id: 0,
-    name: 'To-do List',
-    description: 'A simple HTML list of To Do tasks, styled with Css and added dynamically using Javascript. Webpack is used in bundling the respective components.',
+    name: 'Rockets-React-Redux',
+    description: "A Space Travelers' Hub consisting of Rockets, Missions, and a Profile section.",
     image_top: {
-      url: 'Images/todoList.PNG',
+      url: 'Images/Rockets.PNG',
       alt: '',
     },
-    technologies: ['HTML/CSS', 'JavaScript', '+1'],
+    technologies: ['HTML/CSS', 'React', '+1'],
     image_bottom: {
       url: '#',
       alt: '',
@@ -50,8 +50,8 @@ const projectCards = [
     },
     hasImageBottom: true,
     IsDesktop: true,
-    linktolive: 'https://see-why.github.io/To-do_List/dist/',
-    linktosource: 'https://github.com/see-why/To-do_List',
+    linktolive: 'https://rocket-react-hub.netlify.app/',
+    linktosource: 'https://github.com/see-why/Rockets-React-Redux',
   },
   {
     id: 'mobile-project-1',
@@ -164,13 +164,13 @@ const projectCards = [
   {
     id: 'mobile-project-5',
     project_id: 5,
-    name: 'Project name goes here',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi <br><br> Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
+    name: 'Rails Ledger',
+    description: 'A mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.',
     image_top: {
-      url: 'Images/project-image-5.jpg',
+      url: 'Images/RailsLedger.PNG',
       alt: '',
     },
-    technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
+    technologies: ['HTML/CSS', 'Javascript'],
     image_bottom: {
       url: '#',
       alt: '',
@@ -185,19 +185,19 @@ const projectCards = [
     },
     hasImageBottom: false,
     IsDesktop: false,
-    linktolive: 'https://see-why.github.io/MyPortofolio/',
-    linktosource: 'https://github.com/see-why/MyPortofolio',
+    linktolive: 'https://shielded-wave-68335.herokuapp.com/',
+    linktosource: 'https://github.com/see-why/RailsLedger',
   },
   {
     id: 'mobile-project-6',
     project_id: 6,
-    name: 'Project name goes here',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi <br><br> Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
+    name: 'Car reservation API',
+    description: 'An api with end points to create/view/delete/update Car and Reservation Entities.',
     image_top: {
-      url: 'Images/project-image-6.jpg',
+      url: 'Images/FinalBackEnd.PNG',
       alt: '',
     },
-    technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
+    technologies: ['Ruby on Rails', 'Swagger-Docs'],
     image_bottom: {
       url: '#',
       alt: '',
@@ -212,8 +212,8 @@ const projectCards = [
     },
     hasImageBottom: false,
     IsDesktop: false,
-    linktolive: 'https://see-why.github.io/MyPortofolio/',
-    linktosource: 'https://github.com/see-why/MyPortofolio',
+    linktolive: 'https://afternoon-harbor-85228.herokuapp.com/api-docs/index.html',
+    linktosource: 'https://github.com/Lordkaito/final-capstone-backend',
   },
 ];
 
@@ -221,9 +221,9 @@ function loadNextProjects(seed, id) {
   let projectID = parseInt(id, 10);
 
   if (seed === -1) {
-    projectID = projectID - 1 < 1 ? 4 : projectID - 1;
+    projectID = projectID - 1 < 1 ? 6 : projectID - 1;
   } else {
-    projectID = projectID + 1 > 4 ? 1 : projectID + 1;
+    projectID = projectID + 1 > 6 ? 1 : projectID + 1;
   }
 
   // eslint-disable-next-line no-use-before-define
